@@ -30,10 +30,13 @@ This is the lightweight Asana-style view for the project. Each active item is al
 
 - Translated one complete Indonesia assessment workbook: Gimpu / Pipikoro.
 - Verified the Indonesia assessment uses eleven broad categories and reviewed the qualitative evidence tab.
-- Built a first DRC School Assessment XLSForm starter.
-- Added the 615-school master list and province-filtered school/CONA/SECOPE choices to the Kobo starter.
-- Built the baseline vs. annual/termly vs. monthly monitoring framework.
-- Prepared the supervisor meeting brief and three-visual meeting pack.
+- Built and verified **DRC School Assessment Kobo v0.3**.
+- Reworked the school lookup to **province → level → school**, then auto-fill CONA, SECOPE, municipality and recorded level.
+- Reduced the choice list by removing separate 615-row CONA and SECOPE pick-lists.
+- Added required evidence notes for every assessment category and structured teaching-practice questions.
+- Added a provisional weighted total out of 128, with criterion 11 scored but unweighted to match the Indonesia source.
+- Built the baseline vs. annual/termly vs. monthly monitoring framework, including an **event/change-only** concept and restricted safeguarding workflow.
+- Prepared the final four-page supervisor meeting pack tying together the Indonesia sample, three-tier framework, live Kobo v0.3 demo, key decisions, and two-week plan.
 - Created the GitHub repository dashboard, work log, timeline, open-questions register, issues, and this task board.
 
 ## Working rule
