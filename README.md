@@ -54,7 +54,7 @@ For the Asana-style working view, see **[planning/task-board.md](planning/task-b
 | **Existing annual / termly** | Current DRC reporting obligations | Preserve the existing reporting cycle |
 | **Proposed monthly** | Fast-changing signals that may require action | Keep to a short, roughly five-minute return |
 
-Initial monthly candidates: student attendance; enrolment movement; teacher presence/class coverage; serious facility or WASH problem; priority support/disruption.
+Initial monthly candidates: student attendance; enrolment movement; teacher presence/class coverage; serious facility or WASH problem; priority support/disruption. Serious changes can also be routed as event/change alerts rather than waiting for month end; safeguarding case details should remain in a separate restricted workflow.
 
 ## DRC: key items waiting on confirmation
 
@@ -62,7 +62,7 @@ Initial monthly candidates: student attendance; enrolment movement; teacher pres
 - Official school-to-office mapping.
 - Correct number of managing offices: **13 or 14**.
 - Official controlled lists for education and Salvation Army reporting hierarchies.
-- Duplicate CONA ID **KSS025**.
+- Duplicate CONA ID **KSS025**. The two records currently carry different SECOPE numbers (**8023496** and **8033587**), so the working assumption is that they are distinct schools sharing a bad CONA code; DRC still needs to confirm the official correction.
 - Missing SECOPE IDs and school locations in the source register.
 - Whether school level should use three values or four, including **Basic Education**.
 - Definitions of current reporting abbreviations and categories.
@@ -120,7 +120,7 @@ gantt
 - English translations of the DRC source workbooks.
 - Start-of-Year DRC Kobo XLSForm.
 - DRC Baseline School Profile XLSForm v0.1.
-- DRC School Assessment Kobo starter with the 615-school master list.
+- **DRC School Assessment Kobo v0.3** with province → level → school cascade, auto-filled school identifiers, required evidence notes, and provisional weighted total.
 - Baseline vs. annual/termly vs. monthly monitoring framework.
 - DRC field-trip and supervisor meeting materials.
 - Project work log, open-question tracking, GitHub Issues, and task board.
