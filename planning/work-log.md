@@ -19,6 +19,12 @@ A chronological record of work completed, key outputs, decisions, and open quest
 - Added province-filtered school, CONA, and SECOPE choices and searchable school selection.
 - Preserved unresolved source issues rather than silently correcting them, including duplicate CONA code KSS025 and missing / N.E. SECOPE values.
 - Confirmed that Kobo preview is the safest way to demonstrate the complex XLSForm for now; editing and saving through Formbuilder can hide or simplify advanced XLSForm structures.
+- Verified the improved **DRC School Assessment Kobo v0.3** structure against the current school register: all 615 school rows are present, with province counts matching the source and a 19 nursery / 351 primary / 245 secondary split.
+- Replaced parallel school, CONA and SECOPE pick-lists with a safer **province → level → school** cascade. CONA, SECOPE, municipality and recorded level now auto-fill from the selected school's row.
+- Confirmed the two KSS025 records have different SECOPE numbers, 8023496 and 8033587, supporting the working view that they are two distinct schools with a duplicated/mistyped CONA code; official correction still needs DRC confirmation.
+- Added a provisional Indonesia-style weighted total out of 128. Criterion 11 remains scored but unweighted, while DRC-specific scoring standards and weights remain open for confirmation.
+- Refined the monitoring framework to keep **event/change-only alerts** distinct from monthly reporting and to keep safeguarding incident details in a separate restricted workflow.
+- Consolidated the meeting materials into a four-page final pack: translated Indonesia sample, simple three-tier DRC collection view, Kobo v0.3 live-demo flow, and five decisions plus a two-week work plan.
 
 ### Supervisor and trip preparation
 - Sent the supervisor a written progress update covering the DRC workbook review, trip questions, baseline/monthly framework, and Indonesia assessment access issue.
