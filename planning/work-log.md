@@ -4,23 +4,33 @@ A chronological record of work completed, key outputs, decisions, and open quest
 
 ## Sep 24, 2026
 
-### DRC baseline and trip preparation
-- Finalized the DRC field-trip discussion guide into a non-table conversation format with answer / notes space.
-- Removed the earlier **MUST / IF TIME** prioritization so the guide can be used naturally in meetings.
-- Expanded the guide to cover baseline questions on buildings, WASH, learning materials, GPS, and evidence needs.
-- Built **DRC Baseline School Profile XLSForm v0.1** as a working Kobo form covering identification, hierarchy, utilities / WASH, infrastructure, enrolment, aggregate staffing, learning materials, support needs, GPS, and review checks.
-- Kept unresolved school and hierarchy fields provisional instead of inventing controlled lists.
-- Reviewed the February DRC workbook's nine-criterion assessment section and confirmed that worked examples contain Indonesian references. The intended status of this rubric still needs supervisor / country-team confirmation.
+### Indonesia assessment sample
+- Received access to all eight completed Indonesia school-assessment workbooks from the supervisor.
+- Selected the **Gimpu / Pipikoro** workbook as the translation sample and translated the workbook into English while preserving school names, figures, scores, formulas, and the original assessment structure.
+- Reviewed the qualitative second tab in detail to understand the evidence sitting behind the final school scores.
+- Confirmed that the Indonesia tool uses **11 broad assessment categories**, with a mixture of counts, yes/no items, percentages, condition ratings, and narrative evidence.
+- Identified that several parts of the Indonesia scoring approach should not be transferred mechanically into DRC; country-specific definitions are still required.
 
-### Indonesia assessment follow-up
-- Reviewed the supervisor's request to translate one completed Indonesia school assessment and examine its qualitative second tab.
-- Attempted to access the shared assessment links; access is currently unavailable.
-- Sent the supervisor a project update and request for access or one directly shared workbook.
-- Clarified the working distinction between the **Master School Register**, **Baseline School Profile**, **School Assessment**, and **Monthly Monitoring**.
+### DRC baseline, monitoring, and assessment design
+- Developed a three-tier working framework separating **baseline**, **existing annual / termly reporting**, and a **proposed short monthly return**.
+- Kept existing DRC reporting requirements separate from new M&E recommendations.
+- Built **DRC School Assessment Kobo Starter v0.1** as a tangible working draft based on the eleven broad Indonesia assessment categories, while clearly marking DRC scoring definitions and weights as unresolved.
+- Added the DRC school master to the Kobo starter so the 615 school records do not need to be typed manually.
+- Added province-filtered school, CONA, and SECOPE choices and searchable school selection.
+- Preserved unresolved source issues rather than silently correcting them, including duplicate CONA code KSS025 and missing / N.E. SECOPE values.
+- Confirmed that Kobo preview is the safest way to demonstrate the complex XLSForm for now; editing and saving through Formbuilder can hide or simplify advanced XLSForm structures.
+
+### Supervisor and trip preparation
+- Sent the supervisor a written progress update covering the DRC workbook review, trip questions, baseline/monthly framework, and Indonesia assessment access issue.
+- Prepared a printable supervisor meeting brief for the 25 September discussion.
+- Reduced the proposed presentation approach to three visual items: the translated Indonesia sample, a simple Baseline → Existing Annual/Termly → Proposed Monthly view, and a live Kobo preview.
+- Continued refining the DRC trip questions to focus on information that cannot be answered from the documents.
 
 ### Project management
 - Created private GitHub repository: `chipojaya1/sawso-education-data-system`.
-- Began converting the project history into a living GitHub dashboard and planning log.
+- Built the repository dashboard, timeline, open-questions register, and living work log.
+- Added GitHub Issues for active work, waiting items, and next-stage tasks.
+- Added an Asana-style task-board view in `planning/task-board.md`.
 
 ## Sep 23, 2026
 
