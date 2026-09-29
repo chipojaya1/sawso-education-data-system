@@ -2,6 +2,115 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Sep 29, 2026
+
+### Project reset and current architecture
+- Resumed the project after the weekend and confirmed that the planned Friday meeting with Doug did **not** take place, so there were no supervisor decisions to incorporate.
+- Reconfirmed the working four-instrument architecture for DRC:
+  1. **Master School Register** — who / where the school is.
+  2. **Baseline School Profile** — stable or slow-changing school conditions and resources.
+  3. **School Assessment** — periodic performance / quality assessment.
+  4. **Periodic Monitoring** — a short “what changed?” return focused on actionable signals.
+- Kept the existing DRC annual / termly reporting cycle separate from the proposed new periodic-monitoring layer.
+
+### DRC School Assessment Kobo form
+- Reviewed the current assessment form and stabilized the structure through **v3.2**:
+  - School Identification moved out of the Assessment Details group so its submission path is no longer nested under `/data/visit/`.
+  - `constraint_message::English (en)` now uses the same language tag as the rest of the form, avoiding a phantom second language in Kobo.
+  - Added the visible form title **DRC School Assessment** while keeping the form ID stable.
+  - Retained the **Province → Level → School** cascade and automatic CONA / SECOPE / municipality / recorded-level lookup.
+  - Retained text phone fields and confirm-email / confirm-phone match constraints.
+  - Retained the provisional weighted total out of 128, with criterion 11 scored but currently unweighted.
+- Simplified the school dropdown in **v3.3** to reduce cognitive load for teachers / assessors:
+  - cleaned excessive source whitespace in visible school labels;
+  - removed visible CONA codes from normal school labels;
+  - kept the internal `school_key` unchanged for joins and Power BI;
+  - preserved the original source school name in metadata;
+  - showed the CONA code only for the four genuinely ambiguous Tshopo choices:
+    - EP Batiapanga (TSP018)
+    - EP Batiapanga (TSP021)
+    - EP Ditu (TSP037)
+    - EP Ditu (TSP038)
+  - kept full identifiers available after selection through the existing auto-fill confirmation note.
+- Confirmed no formula / reference errors after the v3.3 school-label changes.
+
+### Decision register, baseline and periodic-monitoring design
+- Built a **DRC Design Workbench** with:
+  - a dashboard;
+  - a Decision Register separating **Confirmed Source**, **Confirmed Build**, **Working Design**, **Needs DRC**, and **Recommendation**;
+  - a draft **Periodic Monitoring v0.1**;
+  - a draft **Baseline Profile v0.2**.
+- Decision Register currently identifies the major items still requiring DRC / Doug confirmation, including:
+  - active school count;
+  - school-to-managing-office mapping;
+  - 13 vs 14 managing offices;
+  - official school levels and hierarchy terminology;
+  - assessment weights / DRC descriptors;
+  - learner-outcome measure;
+  - teacher qualification standard;
+  - legal / accreditation equivalent;
+  - WASH / preparedness thresholds;
+  - assessment cadence and first-round scope;
+  - periodic-monitoring frequency / submitter;
+  - sensitive-data access and dashboard priorities.
+- Periodic Monitoring v0.1 was kept deliberately short and centred on five change signals:
+  - student attendance;
+  - enrolment movement;
+  - teacher presence / class coverage;
+  - serious facility / WASH problem;
+  - priority support / disruption.
+- Kept event/change alerts separate from the routine periodic return and kept safeguarding case details outside the general form in a restricted workflow.
+- Baseline Profile v0.2 was structured around stable / slow-changing fields and explicitly excludes:
+  - detailed 1–4 assessment scores;
+  - periodic attendance / enrolment movement;
+  - safeguarding case details.
+
+### Trip guide cross-check
+- Cross-checked the DRC decision register against the current trip discussion guide.
+- Confirmed that the guide already asks who would submit a short monthly return, so a proposed duplicate question was dropped.
+- Identified several issues that should be asked explicitly rather than left only as document requests, especially:
+  - school-to-managing-office mapping;
+  - how DRC wants 1–4 criterion scores combined / weighted;
+  - DRC descriptors for learner outcomes, staff credentials and teaching quality;
+  - assessment cadence;
+  - first assessment scope.
+- Reframed teacher pay / allowances as a **design question**, not an automatic missing assessment field:
+  - DRC already has a Salary Situation reporting stream;
+  - pay data are sensitive;
+  - if pay is removed from the DRC version of Indonesia Criterion 10, the Indonesia weight attached to that criterion should not be carried across mechanically.
+
+### Power BI synthetic sandbox
+- Built **DRC Power BI Synthetic Sandbox v1.1** to start testing the collection-to-dashboard pipeline before live DRC data exist.
+- The sandbox uses:
+  - **40 sampled schools** — four from each of the ten current geographic groups;
+  - source school names / identifiers from the current DRC register sample;
+  - **40 synthetic school-assessment records**;
+  - **120 synthetic periodic-monitoring records** covering July, August and September 2026.
+- Every fabricated fact row is explicitly marked **SYNTHETIC_TEST_ONLY**.
+- Structured the workbook as a simple analytical model:
+  - `School_Master_Sample` as the dimension;
+  - `Assessment_Fact` as the assessment fact table;
+  - `Monitoring_Fact` as the repeated periodic-monitoring fact table.
+- Added a Power BI setup sheet with:
+  - model relationships;
+  - starter DAX measures;
+  - suggested visuals.
+- Refined the synthetic data so dashboard behaviour is internally coherent:
+  - cleaned school names to match the simplified Kobo v3.3 labels;
+  - aligned assessment attendance with September monitoring attendance;
+  - constrained synthetic relevant qualifications so they do not exceed degree/equivalent counts;
+  - replaced blank problem types with **No problem reported**;
+  - spread synthetic infrastructure scores across all four 1–4 bands so testing visuals have useful variation;
+  - recalculated weighted totals after changes.
+- Confirmed referential integrity and no formula / reference errors in the final sandbox.
+
+### End-of-day position
+- Current Kobo working version: **DRC School Assessment v3.3**.
+- Current analytical sandbox: **DRC Power BI Synthetic Sandbox v1.1**.
+- Current design workbench: **DRC Design Workbench — 29 Sep 2026**.
+- Main next step is to use Power BI to test whether the current data model answers useful management questions, then work backwards to refine the forms only where the dashboard exposes a genuine data need.
+- Do **not** treat provisional scores, weights, synthetic results or Indonesia-specific definitions as DRC facts.
+
 ## Sep 24, 2026
 
 ### Indonesia assessment sample
