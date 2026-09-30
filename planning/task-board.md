@@ -7,7 +7,6 @@ This is the lightweight Asana-style view for the project. Each active item is al
 | Task | Why it matters |
 |---|---|
 | [Finalize concise DRC trip discussion guide](https://github.com/chipojaya1/sawso-education-data-system/issues/1) | Substantively complete; final cleanup/freeze only. |
-| [Refine DRC School Assessment Kobo starter](https://github.com/chipojaya1/sawso-education-data-system/issues/2) | Current working version is **v3.3**; further substantive changes should follow DRC feedback. |
 | [Prepare DRC consultations for October 5-7](https://github.com/chipojaya1/sawso-education-data-system/issues/3) | Use the Decision Register and trip guide to resolve questions the source files cannot answer. |
 | [Build data dictionary and Power BI field mapping](https://github.com/chipojaya1/sawso-education-data-system/issues/8) | **In progress.** Five-day learning/prototype sprint: Oct 1 and Oct 5–8. Use the synthetic sandbox to test the data model before expanding Kobo. |
 
@@ -40,6 +39,8 @@ If DRC consultations occur Oct 5–7, those meetings take priority and the unfin
 | **Refine data dictionary from Power BI findings** | After the Oct 8 dashboard/design review identifies KEEP / QUESTION / REMOVE / MISSING fields. |
 
 ## Recently completed
+
+- DRC School Assessment v3.3 prototype milestone completed; Issue #2 is closed.
 
 - Translated one complete Indonesia assessment workbook: Gimpu / Pipikoro.
 - Built and refined the DRC School Assessment through **v3.3**.
