@@ -1,5 +1,7 @@
 # Supervisor Meeting - Three Visuals
 
+> **Historical note:** This page records the 25 September 2026 meeting-preparation approach. It has been superseded by [2026-09-30-current-discussion-pack.md](2026-09-30-current-discussion-pack.md).
+
 For the 25 September 2026 discussion with Doug, keep the meeting focused on three tangible items.
 
 ## 1. Translated Indonesia sample
