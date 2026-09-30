@@ -13,6 +13,9 @@ Project tracking, KoboToolbox form design, M&E framework, and reporting document
 - **Power BI learning plan:** [planning/power-bi-learning-plan.md](planning/power-bi-learning-plan.md)
 - **DRC Kobo notes:** [forms/DRC/README.md](forms/DRC/README.md)
 - **Power BI / reporting notes:** [reporting/power-bi/README.md](reporting/power-bi/README.md)
+- **Current supervisor / DRC discussion reference:** [docs/meeting/2026-09-30-current-discussion-pack.md](docs/meeting/2026-09-30-current-discussion-pack.md)
+- **DRC Kobo notes:** [forms/DRC/README.md](forms/DRC/README.md)
+- **Power BI / reporting notes:** [reporting/power-bi/README.md](reporting/power-bi/README.md)
 
 ## Current task view
 
