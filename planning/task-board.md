@@ -6,10 +6,22 @@ This is the lightweight Asana-style view for the project. Each active item is al
 
 | Task | Why it matters |
 |---|---|
-| [Finalize concise DRC trip discussion guide](https://github.com/chipojaya1/sawso-education-data-system/issues/1) | Integrate the final cross-check questions without letting the guide grow back into a long questionnaire. |
-| [Refine DRC School Assessment Kobo starter](https://github.com/chipojaya1/sawso-education-data-system/issues/2) | Current working version is **v3.3** with simplified school labels; remaining changes depend mainly on DRC definitions and feedback. |
-| [Prepare DRC consultations for October 5-7](https://github.com/chipojaya1/sawso-education-data-system/issues/3) | Use the Decision Register to resolve the source / design questions the files cannot answer. |
-| [Build data dictionary and Power BI field mapping](https://github.com/chipojaya1/sawso-education-data-system/issues/8) | Started through the synthetic Power BI sandbox; next step is to test which fields actually support useful management views. |
+| [Finalize concise DRC trip discussion guide](https://github.com/chipojaya1/sawso-education-data-system/issues/1) | Substantively complete; final cleanup/freeze only. |
+| [Refine DRC School Assessment Kobo starter](https://github.com/chipojaya1/sawso-education-data-system/issues/2) | Current working version is **v3.3**; further substantive changes should follow DRC feedback. |
+| [Prepare DRC consultations for October 5-7](https://github.com/chipojaya1/sawso-education-data-system/issues/3) | Use the Decision Register and trip guide to resolve questions the source files cannot answer. |
+| [Build data dictionary and Power BI field mapping](https://github.com/chipojaya1/sawso-education-data-system/issues/8) | **In progress.** Five-day learning/prototype sprint: Oct 1 and Oct 5–8. Use the synthetic sandbox to test the data model before expanding Kobo. |
+
+## Power BI sprint
+
+| Date | Focus | Intended output |
+|---|---|---|
+| **Thu Oct 1** | Orientation + import | Three analytical tables loaded and understood |
+| **Mon Oct 5** | Data model | School Master linked 1:* to Assessment and Monitoring |
+| **Tue Oct 6** | Measures + basic DAX | Six tested management measures |
+| **Wed Oct 7** | Dashboard pages 1–2 | System Overview + Periodic Monitoring |
+| **Thu Oct 8** | School detail + design review | Complete first prototype + KEEP / QUESTION / REMOVE / MISSING list |
+
+If DRC consultations occur Oct 5–7, those meetings take priority and the unfinished Power BI block moves to the next available day.
 
 ## Waiting on DRC / supervisor confirmation
 
@@ -25,23 +37,17 @@ This is the lightweight Asana-style view for the project. Each active item is al
 | Task | Trigger |
 |---|---|
 | [Build short monthly monitoring Kobo form v0.1](https://github.com/chipojaya1/sawso-education-data-system/issues/7) | Build only after Doug / DRC confirm monitoring frequency, submitter and core signals. |
-| **Power BI sandbox testing** | Use the synthetic data model to test dashboards and identify real data requirements before expanding the forms. |
+| **Refine data dictionary from Power BI findings** | After the Oct 8 dashboard/design review identifies KEEP / QUESTION / REMOVE / MISSING fields. |
 
 ## Recently completed
 
 - Translated one complete Indonesia assessment workbook: Gimpu / Pipikoro.
-- Verified the Indonesia assessment uses eleven broad categories and reviewed the qualitative evidence tab.
 - Built and refined the DRC School Assessment through **v3.3**.
-- Reworked the school lookup to **Province → Level → School**, then auto-fill CONA, SECOPE, municipality and recorded level.
-- Simplified visible school labels so ordinary dropdown options show only the cleaned official school name; only truly ambiguous same-name records display a code.
-- Added required evidence notes for every assessment category and structured teaching-practice questions.
-- Added a provisional weighted total out of 128, with criterion 11 scored but unweighted pending DRC decisions.
-- Built the **DRC Design Workbench** with a Decision Register, Periodic Monitoring v0.1 and Baseline Profile v0.2.
-- Cross-checked the trip guide against the Decision Register and identified the remaining explicit questions to add.
+- Simplified visible school labels while keeping stable internal school keys.
+- Built the **DRC Design Workbench** with Decision Register, Periodic Monitoring v0.1 and Baseline Profile v0.2.
+- Cross-checked the trip guide against the Decision Register.
 - Built **DRC Power BI Synthetic Sandbox v1.1** with 40 sampled schools, 40 synthetic assessment records and 120 synthetic monitoring records.
-- Structured the Power BI sandbox as School Master + Assessment Fact + Monitoring Fact, with starter DAX, relationships and suggested visuals.
-- Cleaned the synthetic data so Power BI testing is internally coherent while keeping every fabricated value marked as synthetic.
-- Prepared the final four-page supervisor meeting pack tying together the Indonesia sample, three-tier framework, Kobo demo, key decisions, and two-week plan.
+- Structured the sandbox as School Master + Assessment Fact + Monitoring Fact with starter DAX, relationships and suggested visuals.
 
 ## Working rule
 
