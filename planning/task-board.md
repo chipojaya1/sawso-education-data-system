@@ -12,13 +12,13 @@ This is the lightweight Asana-style view for the project. Each active item is al
 
 ## Power BI sprint
 
-| Date | Focus | Intended output |
+| Date | GitHub task | Intended output |
 |---|---|---|
-| **Thu Oct 1** | Orientation + import | Three analytical tables loaded and understood |
-| **Mon Oct 5** | Data model | School Master linked 1:* to Assessment and Monitoring |
-| **Tue Oct 6** | Measures + basic DAX | Six tested management measures |
-| **Wed Oct 7** | Dashboard pages 1–2 | System Overview + Periodic Monitoring |
-| **Thu Oct 8** | School detail + design review | Complete first prototype + KEEP / QUESTION / REMOVE / MISSING list |
+| **Thu Oct 1** | [#13 Power BI 1 - Orientation and import](https://github.com/chipojaya1/sawso-education-data-system/issues/13) | Three analytical tables loaded and understood |
+| **Mon Oct 5** | [#14 Power BI 2 - Build the data model](https://github.com/chipojaya1/sawso-education-data-system/issues/14) | School Master linked 1:* to Assessment and Monitoring |
+| **Tue Oct 6** | [#15 Power BI 3 - Measures and basic DAX](https://github.com/chipojaya1/sawso-education-data-system/issues/15) | Six tested management measures |
+| **Wed Oct 7** | [#16 Power BI 4 - Build overview and monitoring dashboards](https://github.com/chipojaya1/sawso-education-data-system/issues/16) | System Overview + Periodic Monitoring |
+| **Thu Oct 8** | [#17 Power BI 5 - School detail and data-design review](https://github.com/chipojaya1/sawso-education-data-system/issues/17) | Complete first prototype + KEEP / QUESTION / REMOVE / MISSING list |
 
 If DRC consultations occur Oct 5–7, those meetings take priority and the unfinished Power BI block moves to the next available day.
 
