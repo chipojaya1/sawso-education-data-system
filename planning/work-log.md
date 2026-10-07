@@ -2,6 +2,75 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Oct 6, 2026
+
+### DRC team meeting and digitisation pilot discussion
+- Joined the DRC team meeting to meet the country team and begin understanding the operational context directly from staff.
+- Confirmed that the DRC team has **not previously digitised this school-assessment process**, so the proposed school-assessment digitisation will need to be treated as a pilot rather than as a simple conversion of an existing digital workflow.
+- The discussion focused on **why digitisation matters to the DRC team** and on the value of piloting the school assessment before attempting broader scale-up.
+- Framed the pilot as an opportunity to test the **whole workflow**, not only whether a form can be completed on a device:
+  - school selection;
+  - form completion;
+  - offline / field use;
+  - submission;
+  - review and correction;
+  - aggregation / reporting;
+  - follow-up and management use.
+- Kept the current Kobo form positioned as a **prototype for testing and feedback**, not as a final DRC assessment standard.
+- Used the meeting to strengthen the consultation focus around current paper-process pain points, who completes / reviews reports, what would make the pilot successful, and what information the team would actually use for decisions.
+
+### Google Colab / Python app prototype
+- Began a parallel **custom app prototype in Google Colab using Python**, with Gradio selected as the notebook-based interface framework for rapid prototyping.
+- Confirmed the working environment:
+  - Gradio 6.29.0;
+  - pandas 2.2.3.
+- Connected Colab to the SAWSO Google Drive workspace and loaded the current DRC assessment workbook directly from:
+  `/content/drive/MyDrive/SAWSO/DRC/Kobo form/DRC_School_Assessment_Kobo_Starter_v3.3.xlsx`.
+- Verified the workbook structure:
+  - `survey`;
+  - `choices`;
+  - `settings`.
+- Inspected the `choices` sheet and confirmed:
+  - 718 total choice rows;
+  - 615 school-choice rows;
+  - 10 province choices;
+  - 27 province/registration-level combinations;
+  - 5 school-level choice rows in the form configuration.
+- Verified that all **615 school records have a unique `school_key`**, with no duplicate school keys.
+- Confirmed the actual level keys present in the current school register are:
+  - nursery;
+  - primary;
+  - secondary.
+- Built a clean Python `schools_df` for app use, preserving:
+  - stable internal `school_key`;
+  - cleaned teacher-facing school label;
+  - province and readable province label;
+  - level key;
+  - CONA;
+  - SECOPE;
+  - municipality / territory / locality;
+  - recorded education level;
+  - original source school name.
+- Verified the school-master distribution across the ten current geographic groups:
+  - Haut-Katanga 8;
+  - Haut-Lomami 11;
+  - Kasai-Central 41;
+  - Kinshasa 83;
+  - Kongo Central 185;
+  - Kwilu / Bandundu 29;
+  - Mongala 85;
+  - North Kivu, South Kivu & Maniema 11;
+  - Tanganyika 6;
+  - Tshopo 156.
+- Prepared the next app step: a Gradio **Province → Level → School** cascade with auto-filled school identifiers and details.
+
+### End-of-day position
+- The DRC digitisation work now has two complementary prototypes:
+  - the existing **Kobo School Assessment v3.3** for field-oriented testing;
+  - an early **Google Colab / Python / Gradio prototype** for experimenting with custom application logic.
+- The main design principle remains to test the workflow and decision usefulness before scaling either tool.
+- Do not treat the current pilot discussion, provisional scores, or prototype application behaviour as final DRC policy or standards.
+
 ## Sep 29, 2026
 
 ### Project reset and current architecture
