@@ -71,6 +71,61 @@ A chronological record of work completed, key outputs, decisions, and open quest
 - The main design principle remains to test the workflow and decision usefulness before scaling either tool.
 - Do not treat the current pilot discussion, provisional scores, or prototype application behaviour as final DRC policy or standards.
 
+## Oct 7, 2026
+
+### Custom app prototype: assessment workflow
+- Continued building the DRC custom app prototype in Google Colab using Python and Gradio, using the current Kobo v3.3 workbook as the source for field names and choice lists.
+- Extended the prototype from school identification into a working assessment flow covering:
+  - school selection;
+  - assessor information;
+  - Criterion 1 — Infrastructure;
+  - evidence and provisional scoring;
+  - saving an assessment submission.
+- Added the assessor-role workflow, including a conditional **Other assessor role** field so users can specify a role not included in the standard list.
+- Added validation for numeric infrastructure fields so counts cannot be negative and usable classrooms cannot exceed total classrooms.
+- Tested the save workflow and validation messages, including required fields and assessor-role handling.
+- Tested repeated save clicks. Repeated clicks created duplicate test rows, which were then cleaned from **5 rows to 1 retained submission**. This exposed a further prototype requirement for duplicate-submit protection before wider use.
+
+### Criterion 2 preparation
+- Began mapping **Criterion 2 — Facilities, equipment, furniture and teaching materials** directly from the current survey structure rather than recreating the questions from memory.
+- Confirmed the current fields for:
+  - student furniture adequacy and condition;
+  - teacher furniture adequacy;
+  - approximate student textbook ratio;
+  - teacher guide availability;
+  - reading / leveled book availability;
+  - board condition;
+  - criterion score and evidence.
+- Preserved the current source choice lists for adequacy and textbook ratios as the basis for the next app build step.
+- Kept the assessment prototype positioned as a working test environment; current scoring remains provisional pending DRC confirmation.
+
+### Four-level app vision
+- Stepped back from individual form fields to brainstorm what the eventual application should look like for different users in the DRC education reporting chain.
+- Developed a four-level concept using the same underlying school data but different views and tasks:
+  1. **School** — enter, review and submit information; see due dates and the school's own submission history.
+  2. **Managing office / Sub-provincial** — review school submissions, identify missing or problematic records, follow up, and support schools.
+  3. **Provincial** — monitor reporting, compare managing offices, identify patterns and prioritize schools or areas needing attention.
+  4. **National** — see the country picture, reporting coverage, priority needs and data-quality issues to support higher-level decisions.
+- Framed the core principle as **same data, different jobs**: information should be entered once and then reviewed, aggregated and presented differently according to the user's role rather than repeatedly re-entered at each level.
+- Identified the proposed flow as **School → Managing Office / Sub-provincial → Provincial → National**, subject to DRC confirmation of the actual administrative workflow.
+
+### Visual concept and supervisor review materials
+- Turned the four-level concept into visual screen mock-ups for the four user views.
+- Created an editable **Supervisor Review** Word document so the DRC supervisor can comment directly on the proposed views and workflow.
+- Added the Claude-generated visual mock-ups for:
+  - School;
+  - Sub-provincial / Managing Office;
+  - Provincial;
+  - National.
+- Revised the document so the opening is a single concise concept page rather than two repetitive introductory pages, followed directly by the four visual views.
+- Added review prompts focused on what each level should see, what users should be allowed to edit versus review, and which parts of the workflow still require DRC guidance.
+- Kept figures, dates, percentages and example records in the mock-ups clearly positioned as illustrative rather than validated DRC results.
+
+### End-of-day position
+- The work now has both a **working assessment prototype** and a broader **application vision** showing how the same data could support users at four levels.
+- The immediate technical build remains focused on extending the assessment criterion by criterion, while the four-level concept is being used to think backwards from how the information will ultimately be reviewed and used.
+- The four-level application views are a **working concept for supervisor / DRC feedback**, not a final system specification.
+
 ## Sep 29, 2026
 
 ### Project reset and current architecture
