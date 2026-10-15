@@ -126,6 +126,64 @@ A chronological record of work completed, key outputs, decisions, and open quest
 - The immediate technical build remains focused on extending the assessment criterion by criterion, while the four-level concept is being used to think backwards from how the information will ultimately be reviewed and used.
 - The four-level application views are a **working concept for supervisor / DRC feedback**, not a final system specification.
 
+## Oct 14, 2026
+
+### Review of supervisor-prioritized DRC evaluation instruments
+- Recapped Doug's direction to **prioritize digitizing the VF (ENG) School Evaluation Questionnaire** and treat the separate **School Assessment Tool — FEB-2024** as a later, more complex design task.
+- Reviewed the VF questionnaire's structure and purpose as an inquiry into **14 non-negotiable conditions** across three populated domains:
+  - **A. Governance and Compliance** (4 conditions);
+  - **B. Monitoring and Protection** (5 conditions);
+  - **C. Mission and Faith Integration** (5 conditions).
+- Noted that **D. Additional Research Questions** is a heading without populated questions in the source.
+- Distinguished the questionnaire's source content (conditions, data sought, questions and follow-ups) from proposed Kobo field types, skip logic, evidence prompts and compliance judgments.
+- Reviewed the February 2024 assessment workbook conceptually across **Research data - Evidence**, **Weighted scores**, and **Criteria definitions**, with particular attention to Doug's emphasis on the first and third tabs.
+- Flagged substantive issues for later review, including differing criterion coverage between tabs, scoring/weighting inconsistencies, Indonesian-context examples and the need to avoid carrying unapproved criteria into the DRC form.
+
+### Detailed source analysis: VF Section A, Condition 1
+- Began a condition-by-condition review with **Legal Registration** (English worksheet, rows 8–9).
+- Separated three questions that should not be conflated:
+  - whether the school owns the land;
+  - what proof supports ownership or another occupancy arrangement;
+  - which legal document authorizes the school to operate.
+- Examined the source references to property title / parcel record / registration certificate and approval decree / micro-plan / provisional operating authorization.
+- Identified unresolved interpretation and evidence questions: land ownership versus lawful tenure, the legal owner when land belongs to another Salvation Army entity, whether assessors must inspect documents, and how provisional authorization should be handled.
+- Kept proposed evidence-verification statuses and document metadata as **design options**, not source requirements or approved DRC compliance rules.
+- Agreed to understand each original condition and its evidence needs before changing the Kobo prototype.
+
+### End-of-day position
+- Source interpretation and evidence requirements are being examined before further changes to the VF form.
+- The previously uploaded complete VF Kobo v0.1 remains a **draft**: successful Kobo project creation and school filtering had been tested on Oct 13, but full question-level review and conditional-logic testing remain open.
+
+## Oct 15, 2026
+
+### Modular VF questionnaire design decision
+- Decided to work **only on the VF School Evaluation Questionnaire** for this phase; explicitly set aside the February 2024 School Assessment Tool.
+- Clarified that the previously mentioned “baseline data” meant the **school registry**, not a separate baseline profile.
+- Agreed a **five-form development sequence**:
+  1. **Form 1 — Governance and Compliance** (VF Section A, 4 conditions);
+  2. **Form 2 — Monitoring and Protection** (VF Section B, 5 conditions);
+  3. **Form 3 — Mission and Faith Integration** (VF Section C, 5 conditions);
+  4. **Form 4 — School Registry** (later, based on the existing DRC register);
+  5. **Form 5 — Complete School Evaluation** (later, integrating the approved VF sections with school identification).
+- For Forms 1–3, deliberately **excluded the 615-school register, province / level cascades, CONA and SECOPE identifiers** so question wording, response options, evidence prompts and skip logic can be reviewed independently.
+- Maintained the distinction between collecting evidence and making an official compliance determination; no unapproved scores or compliance ratings were introduced.
+
+### Three standalone Kobo XLSForm drafts
+- Prepared three separate sample XLSForm workbooks, each with its own `survey`, `choices`, and `settings` sheets:
+  - `DRC_VF_Form_1_Section_A_Governance_Compliance_SAMPLE_v0.1.xlsx`;
+  - `DRC_VF_Form_2_Section_B_Monitoring_Protection_SAMPLE_v0.1.xlsx`;
+  - `DRC_VF_Form_3_Section_C_Mission_Faith_Integration_SAMPLE_v0.1.xlsx`.
+- Prepared companion `DRC_VF_Forms_1_to_3_Source_Mapping_and_Review_v0.1.xlsx` for tracing source questions, digital adaptations and items requiring Doug's review.
+- Confirmed the intended deliverable format as **three independent documents / Kobo projects**, rather than a combined workbook.
+- Preliminary workbook structure checks were reported during drafting, but **Kobo import, Preview behavior, field usability and question-by-question source fidelity have not yet been independently validated** for these three new forms.
+- The standalone files are draft working artifacts; this log entry does **not** imply they have been uploaded to GitHub or deployed for DRC data collection.
+
+### Next actions
+- Import and test **Form 1** as a separate Kobo project, then test Forms 2 and 3.
+- Review each section against the original VF source, checking question completeness, conditional follow-ups, evidence handling and ambiguous wording.
+- Keep a short list of substantive decisions for Doug; make only justified revisions after testing.
+- Build the standalone School Registry and the combined VF evaluation form only after the modular question drafts have been reviewed.
+
 ## Sep 29, 2026
 
 ### Project reset and current architecture
