@@ -2,6 +2,119 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Oct 15, 2026
+
+### Modular VF questionnaire design decision
+- Decided to work **only on the VF School Evaluation Questionnaire** for this phase; explicitly set aside the February 2024 School Assessment Tool.
+- Clarified that the previously mentioned “baseline data” meant the **school registry**, not a separate baseline profile.
+- Agreed a **five-form development sequence**:
+  1. **Form 1 — Governance and Compliance** (VF Section A, 4 conditions);
+  2. **Form 2 — Monitoring and Protection** (VF Section B, 5 conditions);
+  3. **Form 3 — Mission and Faith Integration** (VF Section C, 5 conditions);
+  4. **Form 4 — School Registry** (later, based on the existing DRC register);
+  5. **Form 5 — Complete School Evaluation** (later, integrating the approved VF sections with school identification).
+- For Forms 1–3, deliberately **excluded the 615-school register, province / level cascades, CONA and SECOPE identifiers** so question wording, response options, evidence prompts and skip logic can be reviewed independently.
+- Maintained the distinction between collecting evidence and making an official compliance determination; no unapproved scores or compliance ratings were introduced.
+
+### Three standalone Kobo XLSForm drafts
+- Prepared three separate sample XLSForm workbooks, each with its own `survey`, `choices`, and `settings` sheets:
+  - `DRC_VF_Form_1_Section_A_Governance_Compliance_SAMPLE_v0.1.xlsx`;
+  - `DRC_VF_Form_2_Section_B_Monitoring_Protection_SAMPLE_v0.1.xlsx`;
+  - `DRC_VF_Form_3_Section_C_Mission_Faith_Integration_SAMPLE_v0.1.xlsx`.
+- Prepared companion `DRC_VF_Forms_1_to_3_Source_Mapping_and_Review_v0.1.xlsx` for tracing source questions, digital adaptations and items requiring Doug's review.
+- Confirmed the intended deliverable format as **three independent documents / Kobo projects**, rather than a combined workbook.
+- Preliminary workbook structure checks were reported during drafting, but **Kobo import, Preview behavior, field usability and question-by-question source fidelity have not yet been independently validated** for these three new forms.
+- The standalone files are draft working artifacts; this log entry does **not** imply they have been uploaded to GitHub or deployed for DRC data collection.
+
+### Next actions
+- Import and test **Form 1** as a separate Kobo project, then test Forms 2 and 3.
+- Review each section against the original VF source, checking question completeness, conditional follow-ups, evidence handling and ambiguous wording.
+- Keep a short list of substantive decisions for Doug; make only justified revisions after testing.
+- Build the standalone School Registry and the combined VF evaluation form only after the modular question drafts have been reviewed.
+
+## Oct 14, 2026
+
+### Review of supervisor-prioritized DRC evaluation instruments
+- Recapped Doug's direction to **prioritize digitizing the VF (ENG) School Evaluation Questionnaire** and treat the separate **School Assessment Tool — FEB-2024** as a later, more complex design task.
+- Reviewed the VF questionnaire's structure and purpose as an inquiry into **14 non-negotiable conditions** across three populated domains:
+  - **A. Governance and Compliance** (4 conditions);
+  - **B. Monitoring and Protection** (5 conditions);
+  - **C. Mission and Faith Integration** (5 conditions).
+- Noted that **D. Additional Research Questions** is a heading without populated questions in the source.
+- Distinguished the questionnaire's source content (conditions, data sought, questions and follow-ups) from proposed Kobo field types, skip logic, evidence prompts and compliance judgments.
+- Reviewed the February 2024 assessment workbook conceptually across **Research data - Evidence**, **Weighted scores**, and **Criteria definitions**, with particular attention to Doug's emphasis on the first and third tabs.
+- Flagged substantive issues for later review, including differing criterion coverage between tabs, scoring/weighting inconsistencies, Indonesian-context examples and the need to avoid carrying unapproved criteria into the DRC form.
+
+### Detailed source analysis: VF Section A, Condition 1
+- Began a condition-by-condition review with **Legal Registration** (English worksheet, rows 8–9).
+- Separated three questions that should not be conflated:
+  - whether the school owns the land;
+  - what proof supports ownership or another occupancy arrangement;
+  - which legal document authorizes the school to operate.
+- Examined the source references to property title / parcel record / registration certificate and approval decree / micro-plan / provisional operating authorization.
+- Identified unresolved interpretation and evidence questions: land ownership versus lawful tenure, the legal owner when land belongs to another Salvation Army entity, whether assessors must inspect documents, and how provisional authorization should be handled.
+- Kept proposed evidence-verification statuses and document metadata as **design options**, not source requirements or approved DRC compliance rules.
+- Agreed to understand each original condition and its evidence needs before changing the Kobo prototype.
+
+### End-of-day position
+- Source interpretation and evidence requirements are being examined before further changes to the VF form.
+- The previously uploaded complete VF Kobo v0.1 remains a **draft**: successful Kobo project creation and school filtering had been tested on Oct 13, but full question-level review and conditional-logic testing remain open.
+
+## Oct 7, 2026
+
+### Custom app prototype: assessment workflow
+- Continued building the DRC custom app prototype in Google Colab using Python and Gradio, using the current Kobo v3.3 workbook as the source for field names and choice lists.
+- Extended the prototype from school identification into a working assessment flow covering:
+  - school selection;
+  - assessor information;
+  - Criterion 1 — Infrastructure;
+  - evidence and provisional scoring;
+  - saving an assessment submission.
+- Added the assessor-role workflow, including a conditional **Other assessor role** field so users can specify a role not included in the standard list.
+- Added validation for numeric infrastructure fields so counts cannot be negative and usable classrooms cannot exceed total classrooms.
+- Tested the save workflow and validation messages, including required fields and assessor-role handling.
+- Tested repeated save clicks. Repeated clicks created duplicate test rows, which were then cleaned from **5 rows to 1 retained submission**. This exposed a further prototype requirement for duplicate-submit protection before wider use.
+
+### Criterion 2 preparation
+- Began mapping **Criterion 2 — Facilities, equipment, furniture and teaching materials** directly from the current survey structure rather than recreating the questions from memory.
+- Confirmed the current fields for:
+  - student furniture adequacy and condition;
+  - teacher furniture adequacy;
+  - approximate student textbook ratio;
+  - teacher guide availability;
+  - reading / leveled book availability;
+  - board condition;
+  - criterion score and evidence.
+- Preserved the current source choice lists for adequacy and textbook ratios as the basis for the next app build step.
+- Kept the assessment prototype positioned as a working test environment; current scoring remains provisional pending DRC confirmation.
+
+### Four-level app vision
+- Stepped back from individual form fields to brainstorm what the eventual application should look like for different users in the DRC education reporting chain.
+- Developed a four-level concept using the same underlying school data but different views and tasks:
+  1. **School** — enter, review and submit information; see due dates and the school's own submission history.
+  2. **Managing office / Sub-provincial** — review school submissions, identify missing or problematic records, follow up, and support schools.
+  3. **Provincial** — monitor reporting, compare managing offices, identify patterns and prioritize schools or areas needing attention.
+  4. **National** — see the country picture, reporting coverage, priority needs and data-quality issues to support higher-level decisions.
+- Framed the core principle as **same data, different jobs**: information should be entered once and then reviewed, aggregated and presented differently according to the user's role rather than repeatedly re-entered at each level.
+- Identified the proposed flow as **School → Managing Office / Sub-provincial → Provincial → National**, subject to DRC confirmation of the actual administrative workflow.
+
+### Visual concept and supervisor review materials
+- Turned the four-level concept into visual screen mock-ups for the four user views.
+- Created an editable **Supervisor Review** Word document so the DRC supervisor can comment directly on the proposed views and workflow.
+- Added the Claude-generated visual mock-ups for:
+  - School;
+  - Sub-provincial / Managing Office;
+  - Provincial;
+  - National.
+- Revised the document so the opening is a single concise concept page rather than two repetitive introductory pages, followed directly by the four visual views.
+- Added review prompts focused on what each level should see, what users should be allowed to edit versus review, and which parts of the workflow still require DRC guidance.
+- Kept figures, dates, percentages and example records in the mock-ups clearly positioned as illustrative rather than validated DRC results.
+
+### End-of-day position
+- The work now has both a **working assessment prototype** and a broader **application vision** showing how the same data could support users at four levels.
+- The immediate technical build remains focused on extending the assessment criterion by criterion, while the four-level concept is being used to think backwards from how the information will ultimately be reviewed and used.
+- The four-level application views are a **working concept for supervisor / DRC feedback**, not a final system specification.
+
 ## Oct 6, 2026
 
 ### DRC team meeting and digitisation pilot discussion
@@ -70,119 +183,6 @@ A chronological record of work completed, key outputs, decisions, and open quest
   - an early **Google Colab / Python / Gradio prototype** for experimenting with custom application logic.
 - The main design principle remains to test the workflow and decision usefulness before scaling either tool.
 - Do not treat the current pilot discussion, provisional scores, or prototype application behaviour as final DRC policy or standards.
-
-## Oct 7, 2026
-
-### Custom app prototype: assessment workflow
-- Continued building the DRC custom app prototype in Google Colab using Python and Gradio, using the current Kobo v3.3 workbook as the source for field names and choice lists.
-- Extended the prototype from school identification into a working assessment flow covering:
-  - school selection;
-  - assessor information;
-  - Criterion 1 — Infrastructure;
-  - evidence and provisional scoring;
-  - saving an assessment submission.
-- Added the assessor-role workflow, including a conditional **Other assessor role** field so users can specify a role not included in the standard list.
-- Added validation for numeric infrastructure fields so counts cannot be negative and usable classrooms cannot exceed total classrooms.
-- Tested the save workflow and validation messages, including required fields and assessor-role handling.
-- Tested repeated save clicks. Repeated clicks created duplicate test rows, which were then cleaned from **5 rows to 1 retained submission**. This exposed a further prototype requirement for duplicate-submit protection before wider use.
-
-### Criterion 2 preparation
-- Began mapping **Criterion 2 — Facilities, equipment, furniture and teaching materials** directly from the current survey structure rather than recreating the questions from memory.
-- Confirmed the current fields for:
-  - student furniture adequacy and condition;
-  - teacher furniture adequacy;
-  - approximate student textbook ratio;
-  - teacher guide availability;
-  - reading / leveled book availability;
-  - board condition;
-  - criterion score and evidence.
-- Preserved the current source choice lists for adequacy and textbook ratios as the basis for the next app build step.
-- Kept the assessment prototype positioned as a working test environment; current scoring remains provisional pending DRC confirmation.
-
-### Four-level app vision
-- Stepped back from individual form fields to brainstorm what the eventual application should look like for different users in the DRC education reporting chain.
-- Developed a four-level concept using the same underlying school data but different views and tasks:
-  1. **School** — enter, review and submit information; see due dates and the school's own submission history.
-  2. **Managing office / Sub-provincial** — review school submissions, identify missing or problematic records, follow up, and support schools.
-  3. **Provincial** — monitor reporting, compare managing offices, identify patterns and prioritize schools or areas needing attention.
-  4. **National** — see the country picture, reporting coverage, priority needs and data-quality issues to support higher-level decisions.
-- Framed the core principle as **same data, different jobs**: information should be entered once and then reviewed, aggregated and presented differently according to the user's role rather than repeatedly re-entered at each level.
-- Identified the proposed flow as **School → Managing Office / Sub-provincial → Provincial → National**, subject to DRC confirmation of the actual administrative workflow.
-
-### Visual concept and supervisor review materials
-- Turned the four-level concept into visual screen mock-ups for the four user views.
-- Created an editable **Supervisor Review** Word document so the DRC supervisor can comment directly on the proposed views and workflow.
-- Added the Claude-generated visual mock-ups for:
-  - School;
-  - Sub-provincial / Managing Office;
-  - Provincial;
-  - National.
-- Revised the document so the opening is a single concise concept page rather than two repetitive introductory pages, followed directly by the four visual views.
-- Added review prompts focused on what each level should see, what users should be allowed to edit versus review, and which parts of the workflow still require DRC guidance.
-- Kept figures, dates, percentages and example records in the mock-ups clearly positioned as illustrative rather than validated DRC results.
-
-### End-of-day position
-- The work now has both a **working assessment prototype** and a broader **application vision** showing how the same data could support users at four levels.
-- The immediate technical build remains focused on extending the assessment criterion by criterion, while the four-level concept is being used to think backwards from how the information will ultimately be reviewed and used.
-- The four-level application views are a **working concept for supervisor / DRC feedback**, not a final system specification.
-
-## Oct 14, 2026
-
-### Review of supervisor-prioritized DRC evaluation instruments
-- Recapped Doug's direction to **prioritize digitizing the VF (ENG) School Evaluation Questionnaire** and treat the separate **School Assessment Tool — FEB-2024** as a later, more complex design task.
-- Reviewed the VF questionnaire's structure and purpose as an inquiry into **14 non-negotiable conditions** across three populated domains:
-  - **A. Governance and Compliance** (4 conditions);
-  - **B. Monitoring and Protection** (5 conditions);
-  - **C. Mission and Faith Integration** (5 conditions).
-- Noted that **D. Additional Research Questions** is a heading without populated questions in the source.
-- Distinguished the questionnaire's source content (conditions, data sought, questions and follow-ups) from proposed Kobo field types, skip logic, evidence prompts and compliance judgments.
-- Reviewed the February 2024 assessment workbook conceptually across **Research data - Evidence**, **Weighted scores**, and **Criteria definitions**, with particular attention to Doug's emphasis on the first and third tabs.
-- Flagged substantive issues for later review, including differing criterion coverage between tabs, scoring/weighting inconsistencies, Indonesian-context examples and the need to avoid carrying unapproved criteria into the DRC form.
-
-### Detailed source analysis: VF Section A, Condition 1
-- Began a condition-by-condition review with **Legal Registration** (English worksheet, rows 8–9).
-- Separated three questions that should not be conflated:
-  - whether the school owns the land;
-  - what proof supports ownership or another occupancy arrangement;
-  - which legal document authorizes the school to operate.
-- Examined the source references to property title / parcel record / registration certificate and approval decree / micro-plan / provisional operating authorization.
-- Identified unresolved interpretation and evidence questions: land ownership versus lawful tenure, the legal owner when land belongs to another Salvation Army entity, whether assessors must inspect documents, and how provisional authorization should be handled.
-- Kept proposed evidence-verification statuses and document metadata as **design options**, not source requirements or approved DRC compliance rules.
-- Agreed to understand each original condition and its evidence needs before changing the Kobo prototype.
-
-### End-of-day position
-- Source interpretation and evidence requirements are being examined before further changes to the VF form.
-- The previously uploaded complete VF Kobo v0.1 remains a **draft**: successful Kobo project creation and school filtering had been tested on Oct 13, but full question-level review and conditional-logic testing remain open.
-
-## Oct 15, 2026
-
-### Modular VF questionnaire design decision
-- Decided to work **only on the VF School Evaluation Questionnaire** for this phase; explicitly set aside the February 2024 School Assessment Tool.
-- Clarified that the previously mentioned “baseline data” meant the **school registry**, not a separate baseline profile.
-- Agreed a **five-form development sequence**:
-  1. **Form 1 — Governance and Compliance** (VF Section A, 4 conditions);
-  2. **Form 2 — Monitoring and Protection** (VF Section B, 5 conditions);
-  3. **Form 3 — Mission and Faith Integration** (VF Section C, 5 conditions);
-  4. **Form 4 — School Registry** (later, based on the existing DRC register);
-  5. **Form 5 — Complete School Evaluation** (later, integrating the approved VF sections with school identification).
-- For Forms 1–3, deliberately **excluded the 615-school register, province / level cascades, CONA and SECOPE identifiers** so question wording, response options, evidence prompts and skip logic can be reviewed independently.
-- Maintained the distinction between collecting evidence and making an official compliance determination; no unapproved scores or compliance ratings were introduced.
-
-### Three standalone Kobo XLSForm drafts
-- Prepared three separate sample XLSForm workbooks, each with its own `survey`, `choices`, and `settings` sheets:
-  - `DRC_VF_Form_1_Section_A_Governance_Compliance_SAMPLE_v0.1.xlsx`;
-  - `DRC_VF_Form_2_Section_B_Monitoring_Protection_SAMPLE_v0.1.xlsx`;
-  - `DRC_VF_Form_3_Section_C_Mission_Faith_Integration_SAMPLE_v0.1.xlsx`.
-- Prepared companion `DRC_VF_Forms_1_to_3_Source_Mapping_and_Review_v0.1.xlsx` for tracing source questions, digital adaptations and items requiring Doug's review.
-- Confirmed the intended deliverable format as **three independent documents / Kobo projects**, rather than a combined workbook.
-- Preliminary workbook structure checks were reported during drafting, but **Kobo import, Preview behavior, field usability and question-by-question source fidelity have not yet been independently validated** for these three new forms.
-- The standalone files are draft working artifacts; this log entry does **not** imply they have been uploaded to GitHub or deployed for DRC data collection.
-
-### Next actions
-- Import and test **Form 1** as a separate Kobo project, then test Forms 2 and 3.
-- Review each section against the original VF source, checking question completeness, conditional follow-ups, evidence handling and ambiguous wording.
-- Keep a short list of substantive decisions for Doug; make only justified revisions after testing.
-- Build the standalone School Registry and the combined VF evaluation form only after the modular question drafts have been reviewed.
 
 ## Sep 29, 2026
 
