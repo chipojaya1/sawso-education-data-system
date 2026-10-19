@@ -2,6 +2,35 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Oct 19, 2026
+
+### Modular VF Kobo forms: review and import progress
+- Revisited the Oct 15 decision to develop the VF questionnaire as three independent **sample** Kobo forms (Sections A, B, C) before building the separate school registry and eventually the complete evaluation.
+- Received and reviewed the three sample XLSForm workbooks for Sections A, B, and C. Initial structural inspection reported standard `survey`, `choices`, and `settings` sheets, no duplicate question names, no unresolved field references in skip logic, and no missing referenced choice lists. These checks are **preliminary**, not equivalent to complete technical or source-fidelity validation.
+- Confirmed **Form 1 — Governance and Compliance** had been imported into KoboToolbox. **Section A1–A4 sample-form testing has not yet been reported as completed**.
+- Confirmed **Form 2 — Monitoring and Protection** was successfully imported into KoboToolbox today. Its five condition groups (B1–B5), preview behavior, branching, usability, and submission workflow are **not yet verified**; successful import is the only user-confirmed test result.
+- **Form 3 — Mission and Faith Integration** remains a standalone XLSForm draft; no successful Kobo import reported.
+- No v0.2 revision made to any of the three drafts; no production deployment or real DRC data collection confirmed.
+
+### Review findings requiring follow-up
+- **Form A:** check classroom-details display when standards are not met; governance-functioning logic when no structures exist; handling of insufficient subsidies even when subsidies are received; legal/property evidence and terminology.
+- **Form B:** examine staff-qualification definitions; child-protection branching and privacy; impact-evaluation introductory note versus answerable items; completion burden of long-form risk questions; evidence needed for meaningful follow-up.
+- **Form C:** review broad spiritual-care and vulnerable-population questions, collaboration narratives, and whether parent-engagement structures' functioning is captured.
+- All substantive response questions remain optional in these sample drafts. This supports prototyping but is not an approved rule for live data collection.
+- Deferred adding 615-school master, geographic cascades, CONA/SECOPE, and cross-form record linkage until modular content is reviewed. A stable school identifier will be necessary before collecting operational data across independent projects.
+
+### Section A conceptual review consolidated
+- Reviewed A1 Legal Registration, A2 Minimum Standards, A3 Governance Structure, and A4 Financial Stability through hypothetical cases and comparisons with related material in the February 2024 assessment tool **for understanding only**. The February workbook is still out of scope for current digitization.
+- Key distinctions: land ownership versus authorization; building/facility availability versus standards compliance; governance structures versus effectiveness; subsidy receipt versus adequate and sustained financial resources.
+- Treated reported answers, supporting evidence, reviewer judgment, and follow-up action as separate concepts. No compliance determination or approved scoring rubric has been invented.
+- These discussions amount to **initial conceptual analysis**, not an exhaustive original-source-to-XLSForm audit.
+
+### Next steps and stopping point
+- Scheduled a reminder for **Oct 20, 2026 (morning)** to test **all Section A conditions A1–A4** in standalone Form 1. Capture pass/fail/unclear results, alternate answer paths, evidence prompts, wording concerns, and stakeholder questions.
+- Next test Form B in Kobo Preview (opens without errors; B1–B5 visible; navigation and conditional paths), then address its source-fidelity and sensitivity/usability checks.
+- Later import and test Form C, conduct cell-by-cell source fidelity reviews, and decide on justified corrections before creating any new versions.
+- Work stopped for the day after Form B import was confirmed; Form B Preview success was **not** confirmed.
+
 ## Oct 15, 2026
 
 ### Modular VF questionnaire design decision
@@ -59,6 +88,15 @@ A chronological record of work completed, key outputs, decisions, and open quest
 ### End-of-day position
 - Source interpretation and evidence requirements are being examined before further changes to the VF form.
 - The previously uploaded complete VF Kobo v0.1 remains a **draft**: successful Kobo project creation and school filtering had been tested on Oct 13, but full question-level review and conditional-logic testing remain open.
+
+## Oct 13, 2026
+
+### First complete VF/IHQ questionnaire draft and technical smoke test
+- Following Doug's request to prioritize the `VF (ENG) Questionnaires basées sur les conditions ADS QGI_DB.xlsx`, prepared an initial **combined** Kobo XLSForm draft, `DRC_IHQ_Conditions_Questionnaire_Kobo_DRAFT_v0.1.xlsx`, and its companion `DRC_IHQ_Conditions_Questionnaire_Source_Map_and_Decisions_v0.1.xlsx`.
+- Mapped the three populated VF domains (A Governance and Compliance; B Monitoring and Protection; C Mission and Faith Integration), keeping 14 conditions distinct and recording source-cell mapping and unresolved adaptation decisions. The source's Section D contained only a heading; no additional questions invented.
+- The complete draft reused the working 615-school list for Province → Level → School selection and auto-populated identifiers; the official school count and underlying master-data issues remain unresolved.
+- **User-confirmed Kobo tests:** successful import; Preview opens; geographic group options appear; province filters school levels; school level filters schools; selected school displays CONA, SECOPE, level and location; and Yes/No land ownership correctly shows/hides the ownership-proof follow-up. Six initial Preview checks passed.
+- The combined form was **not** fully source-verified, field-tested, or approved. This was a useful initial prototype; the later Oct 15 decision superseded it as the *immediate development approach*, without deleting it or treating its tests as proof that the standalone forms work.
 
 ## Oct 7, 2026
 
