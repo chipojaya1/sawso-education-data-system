@@ -31,6 +31,17 @@ A chronological record of work completed, key outputs, decisions, and open quest
 - Later import and test Form C, conduct cell-by-cell source fidelity reviews, and decide on justified corrections before creating any new versions.
 - Work stopped for the day after Form B import was confirmed; Form B Preview success was **not** confirmed.
 
+### End-of-day verification snapshot
+| Sample form | Confirmed status at close of Oct 19 | Still to verify |
+| --- | --- | --- |
+| **Form 1 — Governance and Compliance (A1–A4)** | Imported into KoboToolbox; initial conceptual review completed | All four condition paths in Preview, source-to-question fidelity, conditional follow-ups, evidence fields, test submission |
+| **Form 2 — Monitoring and Protection (B1–B5)** | Imported successfully today | Preview opens correctly, five groups display, branching, sensitive-question handling, usability, test submission |
+| **Form 3 — Mission and Faith Integration (C1–C5)** | Standalone XLSForm draft prepared | Kobo import, Preview, conditional questions, source fidelity, test submission |
+
+- **QA boundary:** A successful import establishes that Kobo accepted the workbook; it does not establish that the questionnaire behaves correctly. No completed end-to-end test, Android/offline field test, or DRC supervisor approval has been confirmed for these three samples.
+- **Carry-forward:** Start with the already planned Oct 20 A1–A4 walkthrough; log actual results as **Pass / Fail / Unclear** with the tested answer path and any question for Doug. Then verify Form 2, followed by Form 3.
+- **Scope remains unchanged:** The school registry and integrated Form 5 are deferred; the February 2024 School Assessment Tool remains out of scope for the current VF digitization work.
+
 ## Oct 15, 2026
 
 ### Modular VF questionnaire design decision
