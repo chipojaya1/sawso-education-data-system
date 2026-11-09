@@ -2,6 +2,28 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Nov 9, 2026
+
+### VF school evaluation: manual Kobo Form Builder prototype
+- Continued the **VF (ENG) School Evaluation Questionnaire** prototype directly in KoboToolbox Form Builder, proceeding one question at a time with confirmation after each step. This is distinct from the February 2024 weighted School Assessment Tool, which remains out of scope for the current VF digitization.
+- Built an introductory assessor/school-identification flow (assessor name, role and assessment date; province and school selection). Used **three fictional provinces (A, B, C)** and **five sample schools** for demonstration. Province-to-school cascading selection and the real 615-school register were intentionally deferred.
+- Worked through **A1 Legal Registration**, covering land ownership, right-to-occupy documentation and document type, optional land-document evidence, and operating registration/authorization status. A separate school registration-number question was deliberately omitted as unnecessary.
+- Began **A2 Minimum Standards** with school-building availability, building condition, construction materials and compliance with the authorized structure. Question 15 (authorized structure) was user-confirmed as entered. Question 16 (number of missing rooms, shown when structure is not compliant) was proposed, but its entry into the live form was **not confirmed** before switching to workbook review.
+- The working form was exported from KoboToolbox for inspection. A first uploaded workbook appeared to be a separate eight-criterion assessment; it was **not** treated as the VF Section A form. A subsequent upload was used as the current working form for the combined build.
+
+### Combined Sections A, B and C overview
+- Prepared an initial **A+B+C overview XLSForm** from the three existing standalone draft workbooks: `SAWSO_VF_Combined_Sections_A_B_C_Overview.xlsx`. This was a demonstration artifact, not a replacement for the user's working Kobo form.
+- Subsequently appended the existing **B1–B5 Monitoring and Protection** and **C1–C5 Mission and Faith Integration** draft sections to the **user's uploaded working form**, producing `SAWSO_School_Evaluation_Your_Form_Plus_B_C.xlsx`. Preserved the uploaded form's existing Section A rather than rebuilding it from the older standalone A draft.
+- The combined file was reported to contain **117 question/data-entry fields**: **59 in the existing A/identification portion, 48 in B, and 10 in C**. Preliminary structural checks reported no duplicate question names, missing choice lists, unresolved references or unmatched groups. These counts and checks describe the draft workbook, **not a completed Kobo import or end-to-end test**.
+- Identified two Section A items requiring recheck: the **registration-authorization evidence photo prompt** discussed during manual design was not present in the uploaded working form, and the **authorized-building-structure skip logic** still needed verification.
+- This integrated overview is for assessing the full respondent journey and section burden. It does **not** establish approved source fidelity, a scoring rubric, compliance decisions, safeguarding/privacy procedures, or readiness for DRC field deployment. The earlier modular A/B/C drafts remain available for separate review.
+
+### Next actions / verification boundary
+- Import the combined workbook as a **new KoboToolbox project**, without overwriting the current working form; verify that A, B and C all display correctly in Preview.
+- Walk through **Yes / No / Don't know** and other conditional paths, particularly A1 document evidence, A2 building-compliance/missing-room logic, and the sensitive protection questions in B. Confirm which fields are actually required and whether optional evidence collection is appropriate.
+- Compare each condition with the original VF questionnaire, review wording and workload with Doug/DRC stakeholders, and record any approved changes before producing a revised version.
+- Resume the step-by-step A2 build only after checking the exported form and the integrated overview. **No user-confirmed successful import, Preview test, submission or field deployment of the new combined workbook has yet been recorded.**
+
 ## Oct 19, 2026
 
 ### Modular VF Kobo forms: review and import progress
