@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DRC School Data System · Four Role Views</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header__title">Salvation Army schools · DRC</div>
+  <p class="app-header__tagline">One system, four views. The same school record, seen differently at each level of the chain.</p>
+  <nav class="level-nav" aria-label="Role level">
+    <button type="button" class="level-nav__tab" role="tab" aria-selected="true" aria-controls="view-school" data-view-target="school">Level 1 · School</button>
+    <button type="button" class="level-nav__tab" role="tab" aria-selected="false" aria-controls="view-office" data-view-target="office">Level 2 · Sub-provincial office</button>
+    <button type="button" class="level-nav__tab" role="tab" aria-selected="false" aria-controls="view-provincial" data-view-target="provincial">Level 3 · Provincial</button>
+    <button type="button" class="level-nav__tab" role="tab" aria-selected="false" aria-controls="view-national" data-view-target="national">Level 4 · National</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ LEVEL 1 · SCHOOL ============ -->
+<section id="view-school" class="view" data-active="true" aria-label="School home screen">
+  <div class="phone-wrap">
+    <div class="phone">
+
+      <div class="phone__identity">
+        <div class="phone__org">Salvation Army schools · DRC</div>
+        <div class="phone__name">EP 3 Selembao</div>
+        <div class="phone__place">Kinshasa · Primary</div>
+        <div class="phone__code">CONA KNP047</div>
+      </div>
+
+      <div class="phone__body">
+
+        <a href="#confirm" class="notice">
+          <div class="notice__title">One detail missing from your record</div>
+          <div class="notice__body">We have no SECOPE number for this school. Can you confirm it?</div>
+          <div class="notice__action">Confirm now</div>
+        </a>
+
+        <a href="#profile" class="task-card">
+          <svg class="task-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F8A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/>
+          </svg>
+          <span>
+            <span class="task-card__title">School profile</span>
+            <span class="task-card__desc">Facilities, staff, enrollment and identifiers</span>
+          </span>
+        </a>
+
+        <a href="#assessment" class="task-card">
+          <svg class="task-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F8A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3 7-7"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+          </svg>
+          <span>
+            <span class="task-card__title">Complete assessment</span>
+            <span class="task-card__desc">Start or continue the school assessment</span>
+          </span>
+        </a>
+
+        <a href="#report" class="task-card">
+          <svg class="task-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F8A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/>
+          </svg>
+          <span>
+            <span class="task-card__title">Submit report</span>
+            <span class="task-card__desc">Start-of-year report · due 15 October</span>
+          </span>
+        </a>
+
+        <a href="#history" class="task-card">
+          <svg class="task-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F8A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/>
+          </svg>
+          <span>
+            <span class="task-card__title">My previous submissions</span>
+            <span class="task-card__desc">What this school has already sent</span>
+          </span>
+        </a>
+
+      </div>
+
+      <div class="phone__status">
+        <div class="status-row">
+          <span class="status-row__label">Assessment</span>
+          <span class="status-row__value" style="color: var(--green)">Complete</span>
+        </div>
+        <div class="status-row">
+          <span class="status-row__label">October report</span>
+          <span class="status-row__value" style="color: var(--amber)">Due in 7 days</span>
+        </div>
+        <div class="status-row">
+          <span class="status-row__label">Last submission</span>
+          <span class="status-row__value--mono">7 Oct 2026</span>
+        </div>
+        <div class="status-row status-row--sync">
+          <span class="status-row__label">Saved on this device</span>
+          <span class="sync-ok">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1C6B46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            3 items waiting to sync
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEVEL 2 · SUB-PROVINCIAL OFFICE ============ -->
+<section id="view-office" class="view" aria-label="Sub-provincial office workspace">
+  <div class="topbar">
+    <div>
+      <div class="topbar__eyebrow">Sub-provincial coordination</div>
+      <div class="topbar__title">CSP Lufu · Kinshasa</div>
+    </div>
+    <div class="topbar__period">
+      <span>Reporting period</span>
+      <span class="topbar__period-value">Start-of-year 2026/27</span>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <div>
+      <div class="section-head">
+        <h1>Schools under your responsibility</h1>
+        <span class="badge-warn">needs the school-to-office mapping</span>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card__value">42</div>
+          <div class="stat-card__sub">schools assigned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--green">35</div>
+          <div class="stat-card__sub">submitted</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--red">5</div>
+          <div class="stat-card__sub">overdue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--amber">2</div>
+          <div class="stat-card__sub">waiting for your review</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>School list</h2>
+        <div>
+          <button type="button" class="btn" id="office-filter-followup" aria-pressed="false">Needs follow-up</button>
+          <button type="button" class="btn btn--primary" id="office-filter-all" aria-pressed="true">All 42</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">School</th>
+              <th scope="col">Assessment</th>
+              <th scope="col">Report</th>
+              <th scope="col">Data issue</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="office-table-body">
+            <tr data-followup="false">
+              <td class="school-name">EP 1 Assossa<span class="school-name__code">KNP006</span></td>
+              <td class="status-ok">Complete</td>
+              <td class="status-ok">Submitted</td>
+              <td class="status-mute">None</td>
+              <td class="action-cell"><a href="#school">View</a></td>
+            </tr>
+            <tr data-followup="true">
+              <td class="school-name">EP 2 Assossa<span class="school-name__code">KNP007</span></td>
+              <td class="status-warn">Incomplete</td>
+              <td class="status-bad">Missing</td>
+              <td class="status-warn">No SECOPE</td>
+              <td class="action-cell"><a href="#school">Follow up</a></td>
+            </tr>
+            <tr data-followup="false">
+              <td class="school-name">EP 3 Barumbu<span class="school-name__code">KNP008</span></td>
+              <td class="status-ok">Complete</td>
+              <td class="status-ok">Submitted</td>
+              <td class="status-mute">None</td>
+              <td class="action-cell"><a href="#school">View</a></td>
+            </tr>
+            <tr data-followup="true">
+              <td class="school-name">Institut Buetasa<span class="school-name__code">KNS055</span></td>
+              <td class="status-ok">Complete</td>
+              <td class="status-warn">Returned</td>
+              <td class="status-warn">Enrollment gap</td>
+              <td class="action-cell"><a href="#school">Review</a></td>
+            </tr>
+            <tr data-followup="true">
+              <td class="school-name">EP 1 Basoko<span class="school-name__code">KNP010</span></td>
+              <td class="status-bad">Not started</td>
+              <td class="status-bad">Missing</td>
+              <td class="status-warn">No address</td>
+              <td class="action-cell"><a href="#school">Follow up</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel--accent panel-pad">
+      <h2 style="margin-bottom: 4px">Review a submission</h2>
+      <p class="panel__lead">You can accept a submission, send it back to the school with a note, or add a comment without changing the school's own answers. The office never edits a school's figures silently.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 9px; align-items: center">
+        <button type="button" class="btn btn--lg btn--success">Accept</button>
+        <button type="button" class="btn btn--lg btn--warn">Return for correction</button>
+        <button type="button" class="btn btn--lg">Add a comment</button>
+        <span class="badge-warn">formal sign-off still to be decided</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ LEVEL 3 · PROVINCIAL ============ -->
+<section id="view-provincial" class="view" aria-label="Provincial dashboard">
+  <div class="topbar">
+    <div>
+      <div class="topbar__eyebrow">Provincial coordination</div>
+      <div class="topbar__title">Kinshasa</div>
+    </div>
+    <nav aria-label="Drill path" class="breadcrumb">
+      DRC <span class="sep">&rsaquo;</span> <strong>Kinshasa</strong> <span class="sep">&rsaquo; office &rsaquo; school</span>
+    </nav>
+  </div>
+
+  <div class="page">
+
+    <section>
+      <div class="section-head">
+        <h1>Reporting</h1>
+        <span class="section-head__meta">start-of-year cycle · as at 8 Oct 2026 · next deadline 30 Oct</span>
+      </div>
+
+      <div class="stat-grid" style="margin-bottom: 14px">
+        <div class="stat-card">
+          <div class="stat-card__value">83</div>
+          <div class="stat-card__sub">schools in province</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--green">92%</div>
+          <div class="stat-card__sub">reporting complete</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--red">7</div>
+          <div class="stat-card__sub">reports outstanding</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value stat-card__value--amber">11</div>
+          <div class="stat-card__sub">schools needing follow-up</div>
+        </div>
+      </div>
+
+      <div class="panel panel-pad">
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px">
+          <h2>Completion by managing office</h2>
+          <span class="badge-warn">needs the mapping</span>
+        </div>
+        <div class="list-rows">
+          <div class="bar-row">
+            <span class="bar-row__label">CSP Lufu</span>
+            <span class="bar-row__track"><span class="bar-row__fill" style="width: 98%; background: var(--green)"></span></span>
+            <span class="bar-row__pct">98%</span>
+            <span class="bar-row__n">41 of 42</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">CSP Tshangu</span>
+            <span class="bar-row__track"><span class="bar-row__fill" style="width: 92%; background: var(--green)"></span></span>
+            <span class="bar-row__pct">92%</span>
+            <span class="bar-row__n">23 of 25</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">CR Kinshasa</span>
+            <span class="bar-row__track"><span class="bar-row__fill" style="width: 76%; background: var(--amber)"></span></span>
+            <span class="bar-row__pct">76%</span>
+            <span class="bar-row__n">12 of 16</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head section-head--divider">
+        <h1>School condition</h1>
+        <span class="section-head__meta section-head__meta--warn">from assessments · 61 of 83 schools · cadence not yet agreed</span>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card__label">Infrastructure</div>
+          <div class="stat-card__score">2.7<span class="stat-card__score-of"> / 4</span></div>
+          <div class="stat-card__sub">average score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Teaching materials</div>
+          <div class="stat-card__score stat-card__score--amber">2.3<span class="stat-card__score-of"> / 4</span></div>
+          <div class="stat-card__sub">lowest in the province</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Usable water on site</div>
+          <div class="stat-card__value" style="font-size: 28px; margin-top: 5px">68%</div>
+          <div class="stat-card__sub">of schools assessed</div>
+        </div>
+        <div class="stat-card stat-card--flagged">
+          <div class="stat-card__label">Priority attention</div>
+          <div class="stat-card__value stat-card__value--red" style="font-size: 28px; margin-top: 5px">12</div>
+          <div class="stat-card__sub"><a href="#priority" style="font-weight: 600">See the list</a></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="page-note">This level is for patterns and exceptions. Opening every school is the sub-provincial office's job, so the only thing here that goes to a single school is the priority list.</p>
+
+  </div>
+</section>
+
+<!-- ============ LEVEL 4 · NATIONAL ============ -->
+<section id="view-national" class="view" aria-label="National overview">
+  <div class="topbar">
+    <div>
+      <div class="topbar__eyebrow">National coordination</div>
+      <div class="topbar__title">DRC education overview</div>
+    </div>
+    <span class="topbar__period-value" style="background: none; padding: 0; color: var(--text-pale-2)">as at 8 Oct 2026</span>
+  </div>
+
+  <div class="page">
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-card__value">615</div>
+        <div class="stat-card__sub">schools in the master register</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value">10</div>
+        <div class="stat-card__sub">geographic groups</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value stat-card__value--green">86%</div>
+        <div class="stat-card__sub">reporting complete</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value stat-card__value--amber">73%<span class="stat-card__dot">&#8226;</span></div>
+        <div class="stat-card__sub">assessment coverage</div>
+      </div>
+    </div>
+
+    <div class="card-grid-2">
+
+      <section class="panel panel-pad">
+        <h2 style="margin-bottom: 3px">Reporting</h2>
+        <p class="panel__lead" style="margin-bottom: 14px">Who is on time against the 13 January calendar</p>
+        <div class="list-rows">
+          <div class="bar-row">
+            <span class="bar-row__label bar-row__label--narrow">Kinshasa</span>
+            <span class="bar-row__track bar-row__track--thin"><span class="bar-row__fill" style="width: 92%; background: var(--green)"></span></span>
+            <span class="bar-row__pct bar-row__pct--narrow">92%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label bar-row__label--narrow">Kongo Central</span>
+            <span class="bar-row__track bar-row__track--thin"><span class="bar-row__fill" style="width: 88%; background: var(--green)"></span></span>
+            <span class="bar-row__pct bar-row__pct--narrow">88%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label bar-row__label--narrow">Tshopo</span>
+            <span class="bar-row__track bar-row__track--thin"><span class="bar-row__fill" style="width: 81%; background: var(--amber)"></span></span>
+            <span class="bar-row__pct bar-row__pct--narrow">81%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label bar-row__label--narrow">Mongala</span>
+            <span class="bar-row__track bar-row__track--thin"><span class="bar-row__fill" style="width: 64%; background: var(--red)"></span></span>
+            <span class="bar-row__pct bar-row__pct--narrow">64%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-pad">
+        <h2 style="margin-bottom: 3px">School conditions</h2>
+        <p class="panel__lead" style="margin-bottom: 14px">Schools assessed as having no usable water on site<span style="color: var(--amber)">&#8226;</span></p>
+        <div class="list-rows">
+          <div class="list-row"><span class="list-row__name">Kongo Central</span><span class="list-row__value list-row__value--red">27</span></div>
+          <div class="list-row"><span class="list-row__name">Tshopo</span><span class="list-row__value list-row__value--red">19</span></div>
+          <div class="list-row"><span class="list-row__name">Kinshasa</span><span class="list-row__value list-row__value--red">14</span></div>
+          <div class="list-row"><span class="list-row__name">Mongala</span><span class="list-row__value list-row__value--red">11</span></div>
+        </div>
+      </section>
+
+      <section class="panel panel-pad">
+        <h2 style="margin-bottom: 3px">Assessment</h2>
+        <p class="panel__lead" style="margin-bottom: 14px">Where support appears most needed<span style="color: var(--amber)">&#8226;</span></p>
+        <div class="list-rows">
+          <div class="list-row"><span class="list-row__name">Teaching materials</span><span class="list-row__value list-row__value--text" style="color: var(--red)">lowest scoring area</span></div>
+          <div class="list-row"><span class="list-row__name">Infrastructure</span><span class="list-row__value list-row__value--text" style="color: var(--amber)">2.7 of 4 nationally</span></div>
+          <div class="list-row"><span class="list-row__name">Schools flagged</span><span class="list-row__value list-row__value--text" style="color: var(--navy)">58 across 10 groups</span></div>
+          <div class="list-row"><span class="list-row__name">Multigrade teaching</span><span class="list-row__value list-row__value--text" style="color: var(--text-faint)">not yet measured</span></div>
+        </div>
+      </section>
+
+      <section class="panel panel--accent-amber panel-pad">
+        <h2 style="margin-bottom: 3px">Data quality</h2>
+        <p class="panel__lead" style="margin-bottom: 14px">Counted here, fixed at the school and the office</p>
+        <div class="list-rows">
+          <div class="list-row"><span class="list-row__name">No SECOPE number recorded</span><span class="list-row__value list-row__value--amber">278</span></div>
+          <div class="list-row"><span class="list-row__name">No address or locality</span><span class="list-row__value list-row__value--amber">191</span></div>
+          <div class="list-row"><span class="list-row__name">No managing office known</span><span class="list-row__value list-row__value--amber">615</span></div>
+          <div class="list-row"><span class="list-row__name">Duplicate CONA code</span><span class="list-row__value list-row__value--amber">1</span></div>
+        </div>
+        <p class="panel-note">Each of these reaches the school that can answer it, as a single prompt on its home screen.</p>
+      </section>
+
+    </div>
+
+    <p class="legend-note"><span class="dot">&#8226;</span> depends on a decision DRC has not made yet: how often the assessment runs, and how many schools the first round covers. Everything unmarked is either a verified register figure or an operational count the system already holds.</p>
+
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
