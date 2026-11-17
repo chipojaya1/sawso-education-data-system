@@ -4,7 +4,7 @@
 
 A static HTML/CSS/JS mockup of the reporting dashboard concept: one system, four role-level views of the same school record.
 
-**Live link:** https://chipojaya1.github.io/sawso-education-data-system/reporting/dashboard-prototype/
+**Live link:** https://chipojaya1.github.io/sawso-education-data-system/ (served from the `gh-pages` branch; the source copy lives in this folder on `main`)
 
 ## Views
 
