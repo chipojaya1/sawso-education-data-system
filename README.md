@@ -37,6 +37,7 @@ Both final DRC designs (`20261117a`) use the same **615-school selection list** 
 ## Start here
 
 - **[See the dashboard](https://chipojaya1.github.io/sawso-education-data-system/)** — the visual idea in action.
+- **[Test the two final Kobo forms and find their links](forms/DRC/KOBO_V2_TEST_LINKS.md)** — verified links will be added after separate Kobo test-project uploads.
 - **[Read the handover for Doug](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md)** — the two forms, what changed, and decisions still needed.
 - **[Open the Python/Colab app and technical handover](https://github.com/chipojaya1/SAEDtechApp)** — where a future developer can start.
 - **[Read the dated internship work log](planning/work-log.md)** — what we did, learned and left for the next team.
