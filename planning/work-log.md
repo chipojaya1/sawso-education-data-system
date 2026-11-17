@@ -2,6 +2,8 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+**November 17 log correction:** The November 10, 11, 13 and 16 entries below were reconstructed from dated SAWSO working conversations and generated workbook milestones. They distinguish completed draft artifacts from proposed changes and unverified Kobo field tests. No activities have been attributed to otherwise undocumented days.
+
 ## Nov 17, 2026 — final DRC Kobo forms and internship handover
 
 ### Final two linked XLSForms (20261117a)
