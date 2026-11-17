@@ -2,6 +2,8 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+**November 17 log correction:** The November 10, 11, 13 and 16 entries below were reconstructed from dated SAWSO working conversations and generated workbook milestones. They distinguish completed draft artifacts from proposed changes and unverified Kobo field tests. No activities have been attributed to otherwise undocumented days.
+
 ## Nov 17, 2026 — final DRC Kobo forms and internship handover
 
 ### Final two linked XLSForms (20261117a)
@@ -23,6 +25,51 @@ A chronological record of work completed, key outputs, decisions, and open quest
 - SAWSO/DRC approval needed for the weight/rating method (including fee-free schools), VF evidence standards, school-to-office mapping, the review/approval workflow, privacy and safeguarding access, and a country-led field pilot.
 - Do **not** commit complete school choice lists, assessor contact data or Kobo submissions to public GitHub. Final XLSForms should be transferred through an SAWSO-approved controlled channel.
 - **Next transition:** Doug's review of both forms; local agreement on governance and fieldwork definitions; staged Kobo pilot; then specification and development of a secure real-data reporting system.
+
+## Nov 16, 2026 — consolidated School Assessment and final review
+
+### Bring the revised assessment into one master version
+- Compared the earlier **country-neutral prototype**, the user's edited assessment workbook and the targeted Criterion 1 review `SAWSO_School_Assessment_Targeted_C1_Review_v0.2.1`. The priority was **preserving the Criterion 1 and 2 work already completed**, not replacing it with another independent questionnaire.
+- Produced/reviewed **`SAWSO_School_Assessment_Consolidated_Master_v0.3.xlsx`**, combining the three-part infrastructure section and two Criterion 2 repeat inventories while restoring provisional **1–4 ratings across all eight criteria**. A corrected working version had previously lost some ratings, so the decision was to maintain a consistent evidence → assessor rating → rationale approach.
+- Carried the six remaining draft criteria through a targeted review in **`SAWSO_School_Assessment_Master_v0.4_Criteria_3_to_8.xlsx`** rather than starting them again. Changes included enrolment/capacity calculations, alternative-school access questions, governance responsibilities, community committee membership, fee information and external-support checks.
+- Prepared **`SAWSO_School_Assessment_Master_v0.5_Handover.xlsx`** as a consolidated **prototype handover candidate** with eight criteria. Performed preliminary structural reviews (field names, lists, references and group boundaries); this is **not** evidence of a successful live Kobo field test.
+
+### Make field completion less burdensome
+- Compared the number of required fields in Criteria 1 and 2, distinguishing **conditionally visible** questions from the total number of XLSForm rows. The design principle became: **select/count first; ask for written explanation when a significant defect needs explaining**.
+- Identified four targeted usability improvements for later controlled edits: optional explanations for minor roof/wall/floor/window problems, optional details for other components and repair history, one optional combined WASH observations field, and a single optional equipment repair/comments field.
+- Practised implementing conditional roof/wall/floor/window detail logic in **KoboToolbox Form Builder**, including the practical difference between simple Mandatory Response controls and conditional required expressions. These were **proposed/step-by-step edits**, not independently verified as completed for all four questions.
+- Reaffirmed that the provisional ratings and original scoring weights should not be called approved results without SAWSO/DRC review.
+
+### Internship close-out communication
+- Prepared the first **four-slide SAWSO internship close-out presentation**, including a reflective summary of accomplishments, lessons, thanks and what could be taken forward. An animated presentation and editable PowerPoint were also produced for review; they are **communication artifacts**, not evidence of an operational app.
+
+## Nov 13, 2026 — Criterion 1 quality review and Criterion 2 inventory redesign
+
+### Criterion 1 workbook inspection and corrections
+- Reviewed the user's completed **Criterion 1 — Infrastructure** workbook against the source requirements and an independent review. Preserved the three sections: **A. Building size and classroom availability; B. Building condition and repairs; C. Water, sanitation and hygiene (WASH)**.
+- Worked through issues such as duplicate repair questions, question naming, classroom and other-room integer/count types, missing constraints, overlapping condition-choice lists, required evidence details and handwashing/toilet functionality.
+- Produced/reviewed the corrected Criterion 1 workbook(s), including `SAWSO_School_Assessment_Criterion_1_Final_Choices.xlsx`, while keeping existing drafts for Criteria 2–8 rather than deleting them.
+
+### Criterion 2 as a structured, repeatable inventory
+- Moved **Criterion 2 — Furniture, Equipment and Instructional Materials** beyond one large free-text inventory. The intended design captures **one equipment or material category per entry**, not a separate row for every physical desk or book.
+- Developed a standalone XLSForm and revised version, including `SAWSO_Criterion_2_Standalone_XLSForm_Revised.xlsx`: equipment type, quantity, usable/repairable/beyond-repair breakdown, repair observations; plus instructional-material type, quantity, curriculum year, condition and sharing ratios.
+- Applied independent technical feedback: removed hard-coded question numbers from labels, required positive nonzero ratio values when recorded, narrowed the curriculum-year range, cleaned label punctuation and prevented redundant rating-choice lists on eventual merge.
+- Checked the uploaded combined workbook `School assessment.xlsx` for duplicate assessment dates, duplicate English language columns, overlapping rating lists and misleading introduction text. Prepared a **separate safe-repair copy** instead of overwriting the user's current Kobo project.
+- **Verification boundary:** workbook-level structural review and a prepared standalone form are not equivalent to Kobo import, offline field testing or staff approval.
+
+## Nov 11, 2026 — complete Criterion 1 WASH section
+
+- Continued the **manual, question-by-question KoboToolbox School Assessment build**. Completed/drafted the **Q25–Q35 WASH sequence** covering total and functional toilets, toilet condition and observations; total and functional handwashing facilities; and the main drinking-water source, sufficiency and cost.
+- Added practical data-quality rules: counts cannot be negative; working toilets/handwashing facilities cannot exceed installed totals; condition-dependent questions appear only when relevant.
+- Captured the difference between **zero facilities** and facilities whose condition cannot be assessed. Drafted/checked conditional prompts for missing drinking-water sources and “Other” responses.
+- These were form-design and manual-entry milestones. Final submission usability, operational counts and country-specific WASH standards still required testing and approval.
+
+## Nov 10, 2026 — begin detailed country-neutral School Assessment rebuild
+
+- Shifted from the earlier modular VF conditions work to the separate **February 2024 School Assessment Tool**, starting a more usable, country-neutral version through **KoboToolbox Form Builder**, question by question.
+- Worked through early **Criterion 1 — Infrastructure** questions: building/classroom counts and availability; condition choices and evidence for roofs, walls, floors and windows; repairs and other building components. By the end of the session, the design had reached the later part of the building-condition questions (around Q19).
+- Replaced broad unstructured descriptions where feasible with **select-one condition descriptions and numeric counts**, keeping typed explanations where assessors need to justify a problem or note repairs.
+- Kept the DRC school list and territory-level adaptation as a separate configuration concern until the form's assessment questions and usability had been reviewed. This build was **work in progress**, not a finished national assessment form.
 
 ## Nov 9, 2026
 

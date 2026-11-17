@@ -1,161 +1,53 @@
 # SAWSO Education Data System
 
-Project tracking, KoboToolbox form design, M&E framework, and reporting documentation for the SAWSO education data systems project.
+**One school. Clear information. Better decisions.**
 
-> **Working repository.** DRC and Indonesia are treated as separate country workstreams. This repository is for project documentation, form design, and tracking. Sensitive learner, safeguarding, salary, or other personally identifiable data should not be stored here.
+Imagine a school needs desks or has a leaking roof. The school knows about the problem, but the people who could help may have information scattered across paper forms and spreadsheets.
 
-## Handover snapshot — 17 November 2026
+This project explores a simpler idea: **collect useful information, identify the right school, and show each level of management what it needs to see.**
 
-The DRC form design work now has **two distinct final v2 XLSForms for supervisor review** (`20261117a`):
+We started with Salvation Army schools in the **Democratic Republic of the Congo (DRC)**. The approach could later be adapted for other territories.
 
-- **School Assessment** — the February 2024 eight-criterion assessment, including two repeat inventories, eight required provisional ratings, a **provisional weighted index** and priority support. Kobo ID: `sawso_school_assessment_consolidated_master`.
-- **School Conditions Questionnaire** — the separate VF evaluation tool covering **14 conditions** across governance/compliance, monitoring/protection and mission/faith integration. Kobo ID: `sawso_vf_abc_combined_v01`; answers do **not** constitute a compliance approval.
+## Try the four-level dashboard
 
-Both workbooks contain a matching **615-school choice list** with **615 unique `school_key` identifiers**, plus the same assessor and province → level → school selection. This creates a usable join key for future secure data integration, **not** a live dashboard connection. **All managing-office values remain `not_mapped`**; school-to-office mapping and programme scoring/fee-free rules need DRC/SAWSO sign-off.
+### [▶ Click here to open the dashboard preview](https://chipojaya1.github.io/sawso-education-data-system/)
 
-**Handover reading order:** [Two final forms for Doug](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md) → [Work log through 17 Nov](planning/work-log.md) → [SAEDtechApp code and Colab notebooks](https://github.com/chipojaya1/SAEDtechApp) → [technical v2 notes](https://github.com/chipojaya1/SAEDtechApp/blob/main/docs/FORM_V2_RELEASE_NOTES.md).
+The clickable example shows how **one school record** could look to four different people:
 
-The earlier **v3.3** descriptions below are retained as historical prototype milestones. The v2 source XLSForms and their school-register choices are held in approved project storage, **not committed here**. Neither the forms nor the app should be described as a deployed national system.
+| View | In simple terms |
+|---|---|
+| **1. School** | What do I need to fill in or correct? |
+| **2. Sub-provincial office** | Which of my schools need follow-up? |
+| **3. Provincial office** | Where are the bigger gaps and needs? |
+| **4. National office** | How is reporting going across the country? |
 
----
+**Presentation / QR code:** This is the **same dashboard URL already used in the internship presentation**. We have **not changed its address**.
 
-## Quick links
+*It's a demo, not a live app. The numbers are examples, and it is not connected to real KoboToolbox or Power BI data.*
 
-- **Internship close-out presentation (interactive, four slides):** [From Lost in the Halls to Making the Vision Visible](reporting/internship-closeout/index.html)
-- **Four-role dashboard concept:** [Reporting dashboard prototype](reporting/dashboard-prototype/README.md)
-- **Live DRC School Assessment Kobo form:** [Open current Kobo prototype](https://kf.kobotoolbox.org/#/forms/a6Tuip5AEJsew2EnVgpBKq/landing)
-- **Task board:** [planning/task-board.md](planning/task-board.md)
-- **Project timeline:** [planning/timeline.md](planning/timeline.md)
-- **Work log (updated through 17 Nov):** [planning/work-log.md](planning/work-log.md)
-- **Final two-form handover for Doug:** [School Assessment vs School Conditions](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md)
-- **Colab Python demo and form-audit workflows:** [SAEDtechApp](https://github.com/chipojaya1/SAEDtechApp)
-- **Power BI learning plan:** [planning/power-bi-learning-plan.md](planning/power-bi-learning-plan.md)
-- **DRC Kobo notes:** [forms/DRC/README.md](forms/DRC/README.md)
-- **Power BI / reporting notes:** [reporting/power-bi/README.md](reporting/power-bi/README.md)
-- **Current supervisor / DRC discussion reference:** [docs/meeting/2026-09-30-current-discussion-pack.md](docs/meeting/2026-09-30-current-discussion-pack.md)
-- **DRC Kobo notes:** [forms/DRC/README.md](forms/DRC/README.md)
-- **Power BI / reporting notes:** [reporting/power-bi/README.md](reporting/power-bi/README.md)
+## The two Kobo forms
 
-## Current task view
+| Form | The question it answers |
+|---|---|
+| **School Assessment** | **How is this school doing, and what support does it need?** Eight criteria covering buildings, equipment, enrolment, school management, fees and more. |
+| **School Conditions Questionnaire** | **Are the key governance, protection and mission-related arrangements in place?** Fourteen institutional conditions; responses are not automatic compliance decisions. |
 
-### In progress
-- [Finalize concise DRC trip discussion guide](https://github.com/chipojaya1/sawso-education-data-system/issues/1)
-- [Prepare DRC consultations for October 5-7](https://github.com/chipojaya1/sawso-education-data-system/issues/3)
-- [Build data dictionary and Power BI field mapping](https://github.com/chipojaya1/sawso-education-data-system/issues/8)
+Both final DRC designs (`20261117a`) use the same **615-school selection list** and `school_key`, making future record matching possible. The **615** is a working register count, not yet a confirmed number of active schools. The Assessment score is **provisional**.
 
-### Waiting on DRC / supervisor confirmation
-- [Confirm approved DRC school list and active school count](https://github.com/chipojaya1/sawso-education-data-system/issues/4)
-- [Obtain school-to-office mapping and official hierarchy lists](https://github.com/chipojaya1/sawso-education-data-system/issues/5)
-- [Confirm DRC school-assessment scoring adaptations](https://github.com/chipojaya1/sawso-education-data-system/issues/6)
-- [Resolve DRC master-register defects](https://github.com/chipojaya1/sawso-education-data-system/issues/9)
+## Start here
 
-### Next
-- [Build short periodic monitoring Kobo form v0.1](https://github.com/chipojaya1/sawso-education-data-system/issues/7) after frequency, submitter, and core signals are confirmed.
+- **[See the dashboard](https://chipojaya1.github.io/sawso-education-data-system/)** — the visual idea in action.
+- **[Read the handover for Doug](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md)** — the two forms, what changed, and decisions still needed.
+- **[Open the Python/Colab app and technical handover](https://github.com/chipojaya1/SAEDtechApp)** — where a future developer can start.
+- **[Read the dated internship work log](planning/work-log.md)** — what we did, learned and left for the next team.
+- **[See the internship close-out presentation](reporting/internship-closeout/index.html)** — the story behind the project.
 
-## Project status
+## What happens next?
 
-| Workstream | Current phase | Status | Immediate next step |
-|---|---|---|---|
-| **DRC School Assessment** | Working Kobo prototype **v3.3** | 🟢 Prototype stable | Gather Doug/DRC feedback on definitions, scoring, weights, hierarchy and pilot scope |
-| **DRC Trip / Consultation** | Discussion guide + Decision Register | 🟡 Active | Use the guide to resolve items that cannot be answered from the source files |
-| **Baseline Profile** | Draft v0.2 | 🟡 Working design | Hold major expansion until DRC confirms hierarchy and country-specific needs |
-| **Periodic Monitoring** | Draft v0.1 question structure | 🟡 Working design | Confirm frequency, submitter, and the smallest useful set of change signals |
-| **Power BI / Reporting** | Synthetic analytical prototype | 🟡 Active | Complete the staged Power BI learning sprint and work backwards from dashboard needs |
-| **Indonesia** | One complete translated assessment sample | 🟢 Reference complete | Use as a reference only; do not copy country-specific standards into DRC |
+DRC and SAWSO still need to confirm **which schools are active**, which **managing office** each reports to (currently all are `not_mapped`), the **assessment and fee-free-school scoring rules**, privacy and approval responsibilities, and a **small field pilot**.
 
-## Current DRC system architecture
+Local leaders, schools and developers can then decide what should become a real system.
 
-| Instrument | Main question it answers | Working cadence |
-|---|---|---|
-| **Master School Register** | What school is this and where does it report? | Maintained centrally; update on change |
-| **Baseline School Profile** | What does the school have and what is its current situation? | Once, then update major changes |
-| **School Assessment** | How is the school performing against agreed criteria? | Periodic; cadence still to be agreed |
-| **Periodic Monitoring** | What important things have changed since the last report? | Monthly, quarterly, or another agreed frequency |
-| **Annual / Term Reporting** | What official education results and totals are required? | Existing termly / annual cycle |
+**This repository is the design story and handover, not a deployed national database.** The complete school register, private responses and personal/safeguarding records are not published here.
 
-Initial periodic-monitoring candidates are student attendance, enrolment movement, teacher presence/class coverage, serious facility or WASH problems, and priority support/disruption. Serious changes may be better handled as event/change alerts; safeguarding case details should remain in a separate restricted workflow.
-
-## Current Kobo prototype
-
-- Current working version: **DRC School Assessment v3.3**.
-- Live form: [https://kf.kobotoolbox.org/#/forms/a6Tuip5AEJsew2EnVgpBKq/landing](https://kf.kobotoolbox.org/#/forms/a6Tuip5AEJsew2EnVgpBKq/landing)
-- User flow: **Province → Level → School → auto-filled identifiers → assessment evidence and provisional score → priority follow-up**.
-- Ordinary school dropdown labels use the cleaned school name only; a code is shown only for genuinely ambiguous same-name records.
-- Internal school keys remain stable for joins and Power BI.
-- CONA, SECOPE, municipality and recorded level auto-fill from the selected school record.
-- Scoring standards and weights remain provisional until DRC confirms them.
-
-## DRC items still waiting on confirmation
-
-- Correct active school total: **615, 617, or another number**.
-- Official school-to-managing-office mapping.
-- Correct number and official names of managing / reporting offices.
-- Official controlled lists for education and Salvation Army reporting hierarchies.
-- Duplicate CONA ID **KSS025** and other register corrections.
-- Meaning / treatment of blank or N.E. SECOPE values.
-- Official school-level taxonomy, including whether Basic Education is separate.
-- Definitions of reporting abbreviations and hierarchy terms.
-- DRC teacher qualification standards.
-- DRC legal / accreditation equivalent.
-- DRC-specific WASH / preparedness thresholds.
-- Learner-outcome measure and scoring descriptions.
-- Final assessment weighting, cadence, and first-round scope.
-- Whether teacher pay / payment regularity belongs in the assessment or remains in existing salary reporting.
-- Periodic-monitoring frequency and submitter.
-- Sensitive-data access rules and dashboard priorities.
-
-## Power BI learning and prototype sprint
-
-The reporting work is now being developed deliberately in stages rather than trying to build a full dashboard at once:
-
-- **Thu Oct 1:** orientation + import
-- **Mon Oct 5:** data model
-- **Tue Oct 6:** measures + basic DAX
-- **Wed Oct 7:** system overview + periodic-monitoring dashboards
-- **Thu Oct 8:** school-detail view + KEEP / QUESTION / REMOVE / MISSING design review
-
-See [planning/power-bi-learning-plan.md](planning/power-bi-learning-plan.md) for the full schedule.
-
-## Recent outputs
-
-- English Gimpu / Pipikoro Indonesia school-assessment sample.
-- DRC source-workbook translations and school-master review.
-- DRC annual-forms structure mapping.
-- DRC Baseline School Profile draft.
-- **DRC School Assessment v3.3** with province → level → school cascade, simplified school labels, auto-filled identifiers, required evidence notes, and provisional weighted total.
-- **DRC Design Workbench** with Decision Register, Periodic Monitoring v0.1 and Baseline Profile v0.2.
-- Updated DRC Trip Discussion Guide with the remaining country decisions made explicit.
-- **DRC Power BI Synthetic Sandbox v1.1** with a School Master dimension, Assessment fact table and Monitoring fact table.
-- Project work log, open-question tracking, GitHub Issues, task board, and timeline.
-
-## Repository structure
-
-```text
-.
-├── README.md
-├── planning/
-│   ├── task-board.md
-│   ├── work-log.md
-│   ├── open-questions.md
-│   ├── timeline.md
-│   └── power-bi-learning-plan.md
-├── docs/
-│   └── meeting/
-├── forms/
-│   └── DRC/
-│       └── README.md
-└── reporting/
-    └── power-bi/
-        └── README.md
-```
-
-## Working principles
-
-- Keep **DRC and Indonesia separate**.
-- Use the official country source files as the evidence base.
-- Do not guess unresolved values; mark them for confirmation.
-- Preserve official school names, place names, and codes; use cleaned display labels without changing stable internal keys.
-- Design backwards from the decisions and reports the system must support.
-- Keep field collection manageable for offline Android / Kobo use.
-- Distinguish existing reporting requirements from new M&E recommendations.
-- Keep sensitive operational data out of this repository unless explicit approval is given.
+*Updated November 17, 2026. Earlier prototypes and country-specific reference work are preserved in the project history.*
