@@ -1,5 +1,7 @@
 # DRC School Assessment Kobo Prototype
 
+**New v2 testing guide and link registry:** [Final Kobo v2 test links for Doug](KOBO_V2_TEST_LINKS.md). The historical v3.3 landing page below should not be presented as the final v2 project without checking the deployed version.
+
 > **Latest handover update (17 Nov 2026):** Two separate DRC Kobo XLSForm designs now supersede this historical v3.3 development snapshot for the **next review stage**. Their source files are kept in approved project storage, not in this GitHub directory. See [Two final forms: brief for Doug](FINAL_FORMS_HANDOVER_2026-11-17.md).
 
 ## Two v2 forms for supervisor review (20261117a)

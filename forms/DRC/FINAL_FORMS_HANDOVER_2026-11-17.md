@@ -41,6 +41,8 @@ Both final XLSForms:
 
 An eventual secure reporting system could show the school's *Assessment* alongside its *Conditions* evidence, with separate dates, versions and review decisions. Avoid joining multiple repeats or historic submissions without deduplicating by submission/version/period.
 
+**Kobo project links and testing status:** [Final v2 test links](KOBO_V2_TEST_LINKS.md). The links in that page are intentionally marked pending until both forms have been uploaded, preview-tested and the real URLs supplied. The older v3.3 project link must not be used as evidence of a deployed v2 form.
+
 ## A practical 60-second demonstration
 
 Select a **fictional school** in the Kobo staging projects:
