@@ -2,6 +2,21 @@
 
 This is the lightweight Asana-style view for the project. Each active item is also a GitHub Issue, so the detailed notes and progress can live with the task.
 
+## Handover snapshot — 17 November 2026
+
+**Internship close-out: form designs completed for supervisor review; implementation decisions transferred to SAWSO/DRC.** The older sprint rows below are retained as historical planning, not a description of work still assigned to the intern.
+
+| Workstream | Delivered | What the next owner should do |
+|---|---|---|
+| Two final DRC Kobo XLSForms | School Assessment (8 criteria) and School Conditions Questionnaire (14 conditions), v2 `20261117a`, identical 615-school selection | Test in staging Kobo; confirm approved active-school register; arrange country field pilot |
+| Linked school identity | Shared `school_key` and selection hierarchy | Obtain and validate **school-to-managing-office** mapping; every current office is `not_mapped` |
+| Scoring and VF standards | Provisional eight-criterion weighted index and separate VF evidence questions | Approve weighting, C3/C7 rules, fee-free school treatment, protection/review standards |
+| Four-role app concept | Static demonstration plus a separate [SAEDtechApp Python/Colab handover](https://github.com/chipojaya1/SAEDtechApp) | Agree roles, access, approvals, data governance and local developer roadmap |
+
+**Primary handover reference:** [Two final forms for Doug](../forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md) and [work log through 17 Nov](work-log.md).
+
+---
+
 ## Doing now
 
 | Task | Why it matters |
