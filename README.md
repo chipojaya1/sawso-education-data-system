@@ -4,6 +4,21 @@ Project tracking, KoboToolbox form design, M&E framework, and reporting document
 
 > **Working repository.** DRC and Indonesia are treated as separate country workstreams. This repository is for project documentation, form design, and tracking. Sensitive learner, safeguarding, salary, or other personally identifiable data should not be stored here.
 
+## Handover snapshot — 17 November 2026
+
+The DRC form design work now has **two distinct final v2 XLSForms for supervisor review** (`20261117a`):
+
+- **School Assessment** — the February 2024 eight-criterion assessment, including two repeat inventories, eight required provisional ratings, a **provisional weighted index** and priority support. Kobo ID: `sawso_school_assessment_consolidated_master`.
+- **School Conditions Questionnaire** — the separate VF evaluation tool covering **14 conditions** across governance/compliance, monitoring/protection and mission/faith integration. Kobo ID: `sawso_vf_abc_combined_v01`; answers do **not** constitute a compliance approval.
+
+Both workbooks contain a matching **615-school choice list** with **615 unique `school_key` identifiers**, plus the same assessor and province → level → school selection. This creates a usable join key for future secure data integration, **not** a live dashboard connection. **All managing-office values remain `not_mapped`**; school-to-office mapping and programme scoring/fee-free rules need DRC/SAWSO sign-off.
+
+**Handover reading order:** [Two final forms for Doug](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md) → [Work log through 17 Nov](planning/work-log.md) → [SAEDtechApp code and Colab notebooks](https://github.com/chipojaya1/SAEDtechApp) → [technical v2 notes](https://github.com/chipojaya1/SAEDtechApp/blob/main/docs/FORM_V2_RELEASE_NOTES.md).
+
+The earlier **v3.3** descriptions below are retained as historical prototype milestones. The v2 source XLSForms and their school-register choices are held in approved project storage, **not committed here**. Neither the forms nor the app should be described as a deployed national system.
+
+---
+
 ## Quick links
 
 - **Internship close-out presentation (interactive, four slides):** [From Lost in the Halls to Making the Vision Visible](reporting/internship-closeout/index.html)
@@ -11,7 +26,9 @@ Project tracking, KoboToolbox form design, M&E framework, and reporting document
 - **Live DRC School Assessment Kobo form:** [Open current Kobo prototype](https://kf.kobotoolbox.org/#/forms/a6Tuip5AEJsew2EnVgpBKq/landing)
 - **Task board:** [planning/task-board.md](planning/task-board.md)
 - **Project timeline:** [planning/timeline.md](planning/timeline.md)
-- **Work log:** [planning/work-log.md](planning/work-log.md)
+- **Work log (updated through 17 Nov):** [planning/work-log.md](planning/work-log.md)
+- **Final two-form handover for Doug:** [School Assessment vs School Conditions](forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md)
+- **Colab Python demo and form-audit workflows:** [SAEDtechApp](https://github.com/chipojaya1/SAEDtechApp)
 - **Power BI learning plan:** [planning/power-bi-learning-plan.md](planning/power-bi-learning-plan.md)
 - **DRC Kobo notes:** [forms/DRC/README.md](forms/DRC/README.md)
 - **Power BI / reporting notes:** [reporting/power-bi/README.md](reporting/power-bi/README.md)
