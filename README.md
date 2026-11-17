@@ -6,6 +6,8 @@ Project tracking, KoboToolbox form design, M&E framework, and reporting document
 
 ## Quick links
 
+- **Internship close-out presentation (interactive, four slides):** [From Lost in the Halls to Making the Vision Visible](reporting/internship-closeout/index.html)
+- **Four-role dashboard concept:** [Reporting dashboard prototype](reporting/dashboard-prototype/README.md)
 - **Live DRC School Assessment Kobo form:** [Open current Kobo prototype](https://kf.kobotoolbox.org/#/forms/a6Tuip5AEJsew2EnVgpBKq/landing)
 - **Task board:** [planning/task-board.md](planning/task-board.md)
 - **Project timeline:** [planning/timeline.md](planning/timeline.md)
