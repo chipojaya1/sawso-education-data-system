@@ -2,6 +2,28 @@
 
 A chronological record of work completed, key outputs, decisions, and open questions for the Educational Technology for International Development internship. Historical entries below preserve what was known at the time; later findings may refine earlier interpretations rather than silently overwrite them.
 
+## Nov 17, 2026 — final DRC Kobo forms and internship handover
+
+### Final two linked XLSForms (20261117a)
+- Consolidated and reviewed **two distinct KoboToolbox questionnaires**, each based on its own source: the February 2024 **School Assessment Tool** and the VF **School Evaluation / Conditions Questionnaire**. The completed handover filenames are `SAWSO_School_Assessment.xlsx` and `SAWSO_School_Conditions.xlsx`.
+- **School Assessment** (Kobo `id_string = sawso_school_assessment_consolidated_master`): eight evidence-based criteria, two repeatable equipment/material inventories, eight **required** 1–4 provisional ratings, a calculated **provisional weighted index** (`weighted_total`, formula with weights 4,1,4,4,3,3,4,2), and `priority_support` / `priority_action` prompts. A rating of 4 in every criterion yields 100 and a rating of 1 in every criterion yields 25; the index is **not** an approved performance percentage. Fee-free-school handling and the source's differing C3/C7 threshold anchors still require review.
+- **School Conditions Questionnaire** (Kobo `id_string = sawso_vf_abc_combined_v01`): all 14 VF conditions across **A: Governance and Compliance (4), B: Monitoring and Protection (5), C: Mission and Faith Integration (5)**. Separated **land tenure documentation** from **operating authorisation**, corrected subsidy-shortfall and classroom-standard follow-ups, converted applicable free-text prompts to selections, and reduced overlap with School Assessment infrastructure/inventory questions. A completed questionnaire is **not** an official compliance ruling.
+- **Shared identification flow:** same assessor/date block and Province → Level → School cascade in each form; the two `school` choice lists match across **615 entries and 615 distinct `school_key` values**. Selected school details/identifiers auto-fill; officers can flag missing or incorrect register details. These verified keys provide a consistent future join for approved Kobo exports.
+- Both forms retain their original Kobo form IDs and use version `20261117a`, but several question names changed from earlier draft exports. Previous test submissions must be **versioned/mapped**, not simply appended. The source agent reported successful pyxform/ODK Validate conversion; this work-log entry does not claim a newly completed end-to-end Kobo field test.
+
+### Reporting/app work and GitHub handover
+- Kept the original **four-role visual dashboard** (School, Sub-provincial, Provincial, National) positioned as a **static, illustrative concept**, not a live database application.
+- Updated companion **[SAEDtechApp](https://github.com/chipojaya1/SAEDtechApp)** repository with a dedicated two-form overview, a **Python/Gradio role-level demo using fictional school records**, two **Google Colab notebooks** (demo launcher and read-only XLSForm audit), schema-only catalogue, privacy-safe migration and developer handover notes.
+- The Colab audit now checks shared Kobo IDs, `school_key` selection consistency and the identical 615-choice school list when an authorized user uploads the two workbooks. The app still does **not** ingest Kobo submissions, authenticate roles or generate production Power BI reports.
+- An **internship close-out presentation** and dashboard demonstration were prepared to show Doug how the original vision could be discussed with territorial leadership, schools and local developers; the deliverable is a feasible design concept and implementation starting point, **not** a finished production app.
+- Prepared a concise [**final-forms brief for Doug**](../forms/DRC/FINAL_FORMS_HANDOVER_2026-11-17.md) explaining which form serves which purpose, how they are linked and what needs approval.
+
+### Dependencies explicitly handed over
+- The 615-school set is consistent between workbooks but **country confirmation of active schools remains pending**. Every `managing_office` entry is currently `not_mapped`, so real office-level reporting and permissions cannot yet be calculated.
+- SAWSO/DRC approval needed for the weight/rating method (including fee-free schools), VF evidence standards, school-to-office mapping, the review/approval workflow, privacy and safeguarding access, and a country-led field pilot.
+- Do **not** commit complete school choice lists, assessor contact data or Kobo submissions to public GitHub. Final XLSForms should be transferred through an SAWSO-approved controlled channel.
+- **Next transition:** Doug's review of both forms; local agreement on governance and fieldwork definitions; staged Kobo pilot; then specification and development of a secure real-data reporting system.
+
 ## Nov 9, 2026
 
 ### VF school evaluation: manual Kobo Form Builder prototype
